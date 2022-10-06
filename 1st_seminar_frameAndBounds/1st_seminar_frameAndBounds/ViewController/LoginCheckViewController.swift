@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginCheckViewController: UIViewController {
-    
+    //MARK: UIView
     private let welcomeLabel : UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
@@ -18,16 +18,16 @@ class LoginCheckViewController: UIViewController {
     }()
     private let confirmBtn : UIButton = {
         let button = UIButton()
-        button.setTitle("확인", for: .normal)
-        button.setTitleColor(.black, for: .normal)
+        button.configureButton(title: "확인")
         button.backgroundColor = .yellow
         return button
     }()
-    
+    //MARK: Objc function
     @objc private func didTapConfirmButton(){
         self.dismiss(animated: true)
     }
     
+    //MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white

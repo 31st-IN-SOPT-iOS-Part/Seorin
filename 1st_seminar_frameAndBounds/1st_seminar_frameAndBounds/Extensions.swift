@@ -33,3 +33,20 @@ extension UIView{
         return frame.origin.x + frame.size.width
     }
 }
+
+extension UIButton {
+    public func configureButton(title : String){
+        self.setTitle(title, for: .normal)
+        self.setTitleColor(.black, for: .normal)
+        self.titleLabel?.textAlignment = .center
+        self.backgroundColor = .systemGray6
+        self.layer.cornerRadius = 5
+    }
+}
+extension UITextField{
+    public func configureTextField(placeholder : String){
+        self.placeholder = placeholder
+        self.borderStyle = .roundedRect
+        self.backgroundColor = .systemGray6
+    }
+}

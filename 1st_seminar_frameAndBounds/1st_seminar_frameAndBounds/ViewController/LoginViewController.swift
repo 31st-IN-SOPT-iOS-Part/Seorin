@@ -8,6 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+//MARK: UIView
     private let startLabel : UILabel = {
         let label = UILabel()
         label.text = "카카오톡을 시작합니다"
@@ -24,9 +25,7 @@ class LoginViewController: UIViewController {
     }()
     private let emailTextField : UITextField = {
         let textField = UITextField()
-        textField.placeholder = "이메일 또는 전화번호"
-        textField.borderStyle = .roundedRect
-        textField.backgroundColor = .systemGray6
+        textField.configureTextField(placeholder: "이메일 또는 전화번호")
         return textField
     }()
     private let passwordTextField : UITextField = {
@@ -38,19 +37,13 @@ class LoginViewController: UIViewController {
     }()
     private let loginButton : UIButton = {
         let button = UIButton()
-        button.setTitle("카카오계정 로그인", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.textAlignment = .center
-        button.backgroundColor = .systemGray6
+        button.configureButton(title: "카카오계정 로그인")
         button.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
         return button
     }()
     private let signUpButton : UIButton = {
         let button = UIButton()
-        button.setTitle("새로운 카카오계정 만들기", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.textAlignment = .center
-        button.backgroundColor = .systemGray6
+        button.configureButton(title: "새로운 카카오계정 만들기")
         button.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
         return button
     }()
@@ -60,6 +53,7 @@ class LoginViewController: UIViewController {
         label.textAlignment = .center
         return label
     }()
+    //MARK: Objc function
     @objc private func didTapLoginButton(){
         let vc = LoginCheckViewController()
         vc.modalPresentationStyle = .formSheet
@@ -69,6 +63,8 @@ class LoginViewController: UIViewController {
     @objc private func didTapSignUpButton(){
         self.navigationController?.pushViewController(SignUpViewController(), animated: true)
     }
+    
+    //MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -80,7 +76,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        startLabel.frame = CGRect(x: 100, y: 100, width: view.width-200, height: 30)
+        startLabel.frame = CGRect(x: 125, y: 100, width: view.width-250, height: 30)
         explainLabel.frame = CGRect(x: 50, y: startLabel.bottom + 20, width: view.width - 100, height: 80)
         emailTextField.frame = CGRect(x: 20, y: explainLabel.bottom+50, width: view.width-40, height: 50)
         passwordTextField.frame = CGRect(x: 20, y: emailTextField.bottom+10, width: view.width-40, height: 50)
