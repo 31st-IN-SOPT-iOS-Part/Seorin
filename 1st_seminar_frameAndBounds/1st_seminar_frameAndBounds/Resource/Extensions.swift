@@ -48,5 +48,6 @@ extension UITextField{
         self.placeholder = placeholder
         self.borderStyle = .roundedRect
         self.backgroundColor = .systemGray6
+        self.clearButtonMode = .whileEditing
     }
 }

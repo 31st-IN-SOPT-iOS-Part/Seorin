@@ -30,9 +30,8 @@ class LoginViewController: UIViewController {
     }()
     private let passwordTextField : UITextField = {
         let textField = UITextField()
-        textField.placeholder = "비밀번호"
-        textField.borderStyle = .roundedRect
-        textField.backgroundColor = .systemGray6
+        textField.configureTextField(placeholder: "비밀번호")
+        textField.isSecureTextEntry = true
         return textField
     }()
     private let loginButton : UIButton = {
@@ -41,10 +40,10 @@ class LoginViewController: UIViewController {
         button.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
         return button
     }()
+    
     private let signUpButton : UIButton = {
         let button = UIButton()
         button.configureButton(title: "새로운 카카오계정 만들기")
-        button.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
         return button
     }()
     private let findAccountLabel : UILabel = {
@@ -60,15 +59,22 @@ class LoginViewController: UIViewController {
         vc.configEmail(emailTextField.text ?? "")
         present(vc, animated: true)
     }
+    
     @objc private func didTapSignUpButton(){
         self.navigationController?.pushViewController(SignUpViewController(), animated: true)
     }
+    
+    
+    
     
     //MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         let component: [Any] = [startLabel, explainLabel, emailTextField, passwordTextField, loginButton, signUpButton, findAccountLabel]
+        
+        signUpButton.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
+        
         component.forEach {
             view.addSubview($0 as! UIView)
         }

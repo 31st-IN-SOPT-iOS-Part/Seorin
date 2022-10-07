@@ -31,14 +31,17 @@ class SignUpViewController: UIViewController {
         return textField
     }()
     
+    
     private let signUpConfirmButton : UIButton = {
         let button = UIButton()
         button.configureButton(title: "새로운 카카오계정 만들기")
         button.addTarget(self, action: #selector(didTapSignUpConfirmButton), for: .touchUpInside)
         return button
     }()
-    //MARK: Objc function
     
+    
+    
+    //MARK: Objc function
     @objc private func didTapSignUpConfirmButton(){
         let vc = LoginCheckViewController()
         vc.modalPresentationStyle = .formSheet

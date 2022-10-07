@@ -19,6 +19,7 @@ class LoginCheckViewController: UIViewController {
     private let confirmBtn : UIButton = {
         let button = UIButton()
         button.configureButton(title: "확인")
+        print("hello!")
         button.backgroundColor = .yellow
         return button
     }()
@@ -34,6 +35,7 @@ class LoginCheckViewController: UIViewController {
         view.addSubview(welcomeLabel)
         view.addSubview(confirmBtn)
         confirmBtn.addTarget(self, action: #selector(didTapConfirmButton), for: .touchUpInside)
+        print("hello world!")
     }
     public func configEmail(_ email : String){
         welcomeLabel.text = "\(email)님\n 환영합니다"
