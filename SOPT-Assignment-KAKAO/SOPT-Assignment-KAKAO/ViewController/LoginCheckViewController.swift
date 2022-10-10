@@ -1,10 +1,3 @@
-//
-//  LoginCheckViewController.swift
-//  1st_seminar_frameAndBounds
-//
-//  Created by Mac Book Pro on 2022/10/05.
-//
-
 import UIKit
 
 class LoginCheckViewController: UIViewController {
@@ -19,7 +12,6 @@ class LoginCheckViewController: UIViewController {
     private let confirmBtn : UIButton = {
         let button = UIButton()
         button.configureButton(title: "확인")
-        print("hello!")
         button.backgroundColor = .yellow
         return button
     }()
@@ -35,7 +27,6 @@ class LoginCheckViewController: UIViewController {
         view.addSubview(welcomeLabel)
         view.addSubview(confirmBtn)
         confirmBtn.addTarget(self, action: #selector(didTapConfirmButton), for: .touchUpInside)
-        print("hello world!")
     }
     public func configEmail(_ email : String){
         welcomeLabel.text = "\(email)님\n 환영합니다"
@@ -46,4 +37,7 @@ class LoginCheckViewController: UIViewController {
         welcomeLabel.frame = CGRect(x: 150, y: 250, width: view.width - 300, height: 100)
         confirmBtn.frame = CGRect(x: 20, y: 550, width: view.width-40, height: 50)
     }
+    
+    
+    
 }

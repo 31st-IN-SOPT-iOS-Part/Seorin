@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  1st_seminar_frameAndBounds
+//  SOPT-Assignment-KAKAO
 //
-//  Created by Mac Book Pro on 2022/10/05.
+//  Created by Mac Book Pro on 2022/10/10.
 //
 
 import UIKit

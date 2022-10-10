@@ -7,33 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52A81F4E28ED706F002C8FD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A81F4D28ED706F002C8FD6 /* AppDelegate.swift */; };
-		52A81F5028ED706F002C8FD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A81F4F28ED706F002C8FD6 /* SceneDelegate.swift */; };
-		52A81F5528ED706F002C8FD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52A81F5328ED706F002C8FD6 /* Main.storyboard */; };
-		52A81F5728ED7071002C8FD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A81F5628ED7071002C8FD6 /* Assets.xcassets */; };
-		52A81F5A28ED7071002C8FD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52A81F5828ED7071002C8FD6 /* LaunchScreen.storyboard */; };
-		52A81F6228ED72D4002C8FD6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A81F6128ED72D4002C8FD6 /* LoginViewController.swift */; };
-		52A81F6528ED73DE002C8FD6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A81F6428ED73DD002C8FD6 /* SignUpViewController.swift */; };
-		52A81F6728ED740C002C8FD6 /* LoginCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A81F6628ED740C002C8FD6 /* LoginCheckViewController.swift */; };
-		52A81F6928ED744F002C8FD6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A81F6828ED744F002C8FD6 /* Extensions.swift */; };
+		52CACA1C28F3FD6A001ADB19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CACA1B28F3FD6A001ADB19 /* AppDelegate.swift */; };
+		52CACA1E28F3FD6A001ADB19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CACA1D28F3FD6A001ADB19 /* SceneDelegate.swift */; };
+		52CACA2328F3FD6A001ADB19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CACA2128F3FD6A001ADB19 /* Main.storyboard */; };
+		52CACA2528F3FD6C001ADB19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52CACA2428F3FD6C001ADB19 /* Assets.xcassets */; };
+		52CACA2828F3FD6C001ADB19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CACA2628F3FD6C001ADB19 /* LaunchScreen.storyboard */; };
+		52CACA3428F3FDEC001ADB19 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CACA3328F3FDEC001ADB19 /* LoginViewController.swift */; };
+		52CACA3628F3FDF4001ADB19 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CACA3528F3FDF4001ADB19 /* SignUpViewController.swift */; };
+		52CACA3828F3FDFD001ADB19 /* LoginCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CACA3728F3FDFD001ADB19 /* LoginCheckViewController.swift */; };
+		52CACA3A28F3FE20001ADB19 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CACA3928F3FE20001ADB19 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		52A81F4A28ED706F002C8FD6 /* 1st_seminar_frameAndBounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1st_seminar_frameAndBounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		52A81F4D28ED706F002C8FD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52A81F4F28ED706F002C8FD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		52A81F5428ED706F002C8FD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		52A81F5628ED7071002C8FD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		52A81F5928ED7071002C8FD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		52A81F5B28ED7071002C8FD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52A81F6128ED72D4002C8FD6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		52A81F6428ED73DD002C8FD6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		52A81F6628ED740C002C8FD6 /* LoginCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCheckViewController.swift; sourceTree = "<group>"; };
-		52A81F6828ED744F002C8FD6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		52CACA1828F3FD6A001ADB19 /* SOPT-Assignment-KAKAO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOPT-Assignment-KAKAO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52CACA1B28F3FD6A001ADB19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52CACA1D28F3FD6A001ADB19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		52CACA2228F3FD6A001ADB19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52CACA2428F3FD6C001ADB19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52CACA2728F3FD6C001ADB19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52CACA2928F3FD6C001ADB19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52CACA3328F3FDEC001ADB19 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		52CACA3528F3FDF4001ADB19 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		52CACA3728F3FDFD001ADB19 /* LoginCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCheckViewController.swift; sourceTree = "<group>"; };
+		52CACA3928F3FE20001ADB19 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		52A81F4728ED706F002C8FD6 /* Frameworks */ = {
+		52CACA1528F3FD6A001ADB19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,91 +43,107 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5244905728EEE05B004F2A6F /* Resource */ = {
+		52CACA0F28F3FD6A001ADB19 = {
 			isa = PBXGroup;
 			children = (
-				52A81F4D28ED706F002C8FD6 /* AppDelegate.swift */,
-				52A81F4F28ED706F002C8FD6 /* SceneDelegate.swift */,
-				52A81F6828ED744F002C8FD6 /* Extensions.swift */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
-		52A81F4128ED706E002C8FD6 = {
-			isa = PBXGroup;
-			children = (
-				52A81F4C28ED706F002C8FD6 /* 1st_seminar_frameAndBounds */,
-				52A81F4B28ED706F002C8FD6 /* Products */,
+				52CACA1A28F3FD6A001ADB19 /* SOPT-Assignment-KAKAO */,
+				52CACA1928F3FD6A001ADB19 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		52A81F4B28ED706F002C8FD6 /* Products */ = {
+		52CACA1928F3FD6A001ADB19 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52A81F4A28ED706F002C8FD6 /* 1st_seminar_frameAndBounds.app */,
+				52CACA1828F3FD6A001ADB19 /* SOPT-Assignment-KAKAO.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		52A81F4C28ED706F002C8FD6 /* 1st_seminar_frameAndBounds */ = {
+		52CACA1A28F3FD6A001ADB19 /* SOPT-Assignment-KAKAO */ = {
 			isa = PBXGroup;
 			children = (
-				5244905728EEE05B004F2A6F /* Resource */,
-				52A81F6328ED72DC002C8FD6 /* ViewController */,
-				52A81F5328ED706F002C8FD6 /* Main.storyboard */,
-				52A81F5628ED7071002C8FD6 /* Assets.xcassets */,
-				52A81F5828ED7071002C8FD6 /* LaunchScreen.storyboard */,
-				52A81F5B28ED7071002C8FD6 /* Info.plist */,
+				52CACA3128F3FDB1001ADB19 /* View */,
+				52CACA3028F3FD8A001ADB19 /* Resource */,
+				52CACA2F28F3FD80001ADB19 /* ViewController */,
+				52CACA2428F3FD6C001ADB19 /* Assets.xcassets */,
+				52CACA2928F3FD6C001ADB19 /* Info.plist */,
 			);
-			path = 1st_seminar_frameAndBounds;
+			path = "SOPT-Assignment-KAKAO";
 			sourceTree = "<group>";
 		};
-		52A81F6328ED72DC002C8FD6 /* ViewController */ = {
+		52CACA2F28F3FD80001ADB19 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				52A81F6128ED72D4002C8FD6 /* LoginViewController.swift */,
-				52A81F6428ED73DD002C8FD6 /* SignUpViewController.swift */,
-				52A81F6628ED740C002C8FD6 /* LoginCheckViewController.swift */,
+				52CACA3328F3FDEC001ADB19 /* LoginViewController.swift */,
+				52CACA3528F3FDF4001ADB19 /* SignUpViewController.swift */,
+				52CACA3728F3FDFD001ADB19 /* LoginCheckViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		52CACA3028F3FD8A001ADB19 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				52CACA1B28F3FD6A001ADB19 /* AppDelegate.swift */,
+				52CACA1D28F3FD6A001ADB19 /* SceneDelegate.swift */,
+				52CACA3928F3FE20001ADB19 /* Extensions.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		52CACA3128F3FDB1001ADB19 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52CACA3228F3FDB8001ADB19 /* Storybaords */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52CACA3228F3FDB8001ADB19 /* Storybaords */ = {
+			isa = PBXGroup;
+			children = (
+				52CACA2128F3FD6A001ADB19 /* Main.storyboard */,
+				52CACA2628F3FD6C001ADB19 /* LaunchScreen.storyboard */,
+			);
+			path = Storybaords;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		52A81F4928ED706F002C8FD6 /* 1st_seminar_frameAndBounds */ = {
+		52CACA1728F3FD6A001ADB19 /* SOPT-Assignment-KAKAO */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52A81F5E28ED7071002C8FD6 /* Build configuration list for PBXNativeTarget "1st_seminar_frameAndBounds" */;
+			buildConfigurationList = 52CACA2C28F3FD6C001ADB19 /* Build configuration list for PBXNativeTarget "SOPT-Assignment-KAKAO" */;
 			buildPhases = (
-				52A81F4628ED706F002C8FD6 /* Sources */,
-				52A81F4728ED706F002C8FD6 /* Frameworks */,
-				52A81F4828ED706F002C8FD6 /* Resources */,
+				52CACA1428F3FD6A001ADB19 /* Sources */,
+				52CACA1528F3FD6A001ADB19 /* Frameworks */,
+				52CACA1628F3FD6A001ADB19 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = 1st_seminar_frameAndBounds;
-			productName = 1st_seminar_frameAndBounds;
-			productReference = 52A81F4A28ED706F002C8FD6 /* 1st_seminar_frameAndBounds.app */;
+			name = "SOPT-Assignment-KAKAO";
+			productName = "SOPT-Assignment-KAKAO";
+			productReference = 52CACA1828F3FD6A001ADB19 /* SOPT-Assignment-KAKAO.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		52A81F4228ED706E002C8FD6 /* Project object */ = {
+		52CACA1028F3FD6A001ADB19 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
-					52A81F4928ED706F002C8FD6 = {
+					52CACA1728F3FD6A001ADB19 = {
 						CreatedOnToolsVersion = 13.3;
 					};
 				};
 			};
-			buildConfigurationList = 52A81F4528ED706E002C8FD6 /* Build configuration list for PBXProject "1st_seminar_frameAndBounds" */;
+			buildConfigurationList = 52CACA1328F3FD6A001ADB19 /* Build configuration list for PBXProject "SOPT-Assignment-KAKAO" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -135,58 +151,58 @@
 				en,
 				Base,
 			);
-			mainGroup = 52A81F4128ED706E002C8FD6;
-			productRefGroup = 52A81F4B28ED706F002C8FD6 /* Products */;
+			mainGroup = 52CACA0F28F3FD6A001ADB19;
+			productRefGroup = 52CACA1928F3FD6A001ADB19 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				52A81F4928ED706F002C8FD6 /* 1st_seminar_frameAndBounds */,
+				52CACA1728F3FD6A001ADB19 /* SOPT-Assignment-KAKAO */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		52A81F4828ED706F002C8FD6 /* Resources */ = {
+		52CACA1628F3FD6A001ADB19 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52A81F5A28ED7071002C8FD6 /* LaunchScreen.storyboard in Resources */,
-				52A81F5728ED7071002C8FD6 /* Assets.xcassets in Resources */,
-				52A81F5528ED706F002C8FD6 /* Main.storyboard in Resources */,
+				52CACA2828F3FD6C001ADB19 /* LaunchScreen.storyboard in Resources */,
+				52CACA2528F3FD6C001ADB19 /* Assets.xcassets in Resources */,
+				52CACA2328F3FD6A001ADB19 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		52A81F4628ED706F002C8FD6 /* Sources */ = {
+		52CACA1428F3FD6A001ADB19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52A81F4E28ED706F002C8FD6 /* AppDelegate.swift in Sources */,
-				52A81F5028ED706F002C8FD6 /* SceneDelegate.swift in Sources */,
-				52A81F6528ED73DE002C8FD6 /* SignUpViewController.swift in Sources */,
-				52A81F6228ED72D4002C8FD6 /* LoginViewController.swift in Sources */,
-				52A81F6928ED744F002C8FD6 /* Extensions.swift in Sources */,
-				52A81F6728ED740C002C8FD6 /* LoginCheckViewController.swift in Sources */,
+				52CACA3428F3FDEC001ADB19 /* LoginViewController.swift in Sources */,
+				52CACA3A28F3FE20001ADB19 /* Extensions.swift in Sources */,
+				52CACA1C28F3FD6A001ADB19 /* AppDelegate.swift in Sources */,
+				52CACA1E28F3FD6A001ADB19 /* SceneDelegate.swift in Sources */,
+				52CACA3628F3FDF4001ADB19 /* SignUpViewController.swift in Sources */,
+				52CACA3828F3FDFD001ADB19 /* LoginCheckViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		52A81F5328ED706F002C8FD6 /* Main.storyboard */ = {
+		52CACA2128F3FD6A001ADB19 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				52A81F5428ED706F002C8FD6 /* Base */,
+				52CACA2228F3FD6A001ADB19 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		52A81F5828ED7071002C8FD6 /* LaunchScreen.storyboard */ = {
+		52CACA2628F3FD6C001ADB19 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				52A81F5928ED7071002C8FD6 /* Base */,
+				52CACA2728F3FD6C001ADB19 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -194,7 +210,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		52A81F5C28ED7071002C8FD6 /* Debug */ = {
+		52CACA2A28F3FD6C001ADB19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -254,7 +270,7 @@
 			};
 			name = Debug;
 		};
-		52A81F5D28ED7071002C8FD6 /* Release */ = {
+		52CACA2B28F3FD6C001ADB19 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -308,7 +324,7 @@
 			};
 			name = Release;
 		};
-		52A81F5F28ED7071002C8FD6 /* Debug */ = {
+		52CACA2D28F3FD6C001ADB19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -317,7 +333,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FQJCX687Q4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = 1st_seminar_frameAndBounds/Info.plist;
+				INFOPLIST_FILE = "SOPT-Assignment-KAKAO/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -328,7 +344,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Seorin.-st-seminar-frameAndBounds";
+				PRODUCT_BUNDLE_IDENTIFIER = "Seorin.SOPT-Assignment-KAKAO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -336,7 +352,7 @@
 			};
 			name = Debug;
 		};
-		52A81F6028ED7071002C8FD6 /* Release */ = {
+		52CACA2E28F3FD6C001ADB19 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -345,7 +361,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FQJCX687Q4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = 1st_seminar_frameAndBounds/Info.plist;
+				INFOPLIST_FILE = "SOPT-Assignment-KAKAO/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -356,7 +372,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Seorin.-st-seminar-frameAndBounds";
+				PRODUCT_BUNDLE_IDENTIFIER = "Seorin.SOPT-Assignment-KAKAO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -367,25 +383,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		52A81F4528ED706E002C8FD6 /* Build configuration list for PBXProject "1st_seminar_frameAndBounds" */ = {
+		52CACA1328F3FD6A001ADB19 /* Build configuration list for PBXProject "SOPT-Assignment-KAKAO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				52A81F5C28ED7071002C8FD6 /* Debug */,
-				52A81F5D28ED7071002C8FD6 /* Release */,
+				52CACA2A28F3FD6C001ADB19 /* Debug */,
+				52CACA2B28F3FD6C001ADB19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52A81F5E28ED7071002C8FD6 /* Build configuration list for PBXNativeTarget "1st_seminar_frameAndBounds" */ = {
+		52CACA2C28F3FD6C001ADB19 /* Build configuration list for PBXNativeTarget "SOPT-Assignment-KAKAO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				52A81F5F28ED7071002C8FD6 /* Debug */,
-				52A81F6028ED7071002C8FD6 /* Release */,
+				52CACA2D28F3FD6C001ADB19 /* Debug */,
+				52CACA2E28F3FD6C001ADB19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 52A81F4228ED706E002C8FD6 /* Project object */;
+	rootObject = 52CACA1028F3FD6A001ADB19 /* Project object */;
 }
