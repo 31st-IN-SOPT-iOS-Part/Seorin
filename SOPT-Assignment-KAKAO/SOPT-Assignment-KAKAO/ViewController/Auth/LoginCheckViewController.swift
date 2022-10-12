@@ -34,20 +34,29 @@ class LoginCheckViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        view.addSubview(welcomeLabel)
-        view.addSubview(confirmBtn)
+        
+        setLoginCheckViewControllerLayout()
         confirmBtn.addTarget(self, action: #selector(didTapConfirmButton), for: .touchUpInside)
     }
+
     public func configEmail(_ email : String){
         welcomeLabel.text = "\(email)님\n 환영합니다"
     }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        welcomeLabel.frame = CGRect(x: 150, y: 250, width: view.width - 300, height: 100)
-        confirmBtn.frame = CGRect(x: 20, y: 550, width: view.width-40, height: 50)
+}
+
+
+extension LoginCheckViewController{
+    private func setLoginCheckViewControllerLayout(){
+        view.addSubview(welcomeLabel)
+        view.addSubview(confirmBtn)
+        welcomeLabel.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(197)
+            make.centerX.equalToSuperview()
+        }
+        confirmBtn.snp.makeConstraints { make in
+            make.top.equalTo(welcomeLabel.snp.bottom).offset(117)
+            make.leading.trailing.equalToSuperview().inset(21)
+            make.height.equalTo(44)
+        }
     }
-    
-    
-    
 }

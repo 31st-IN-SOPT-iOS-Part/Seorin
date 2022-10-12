@@ -50,6 +50,9 @@ class HomeViewController: UIViewController {
         navigationViewController.modalPresentationStyle = .fullScreen
         present(navigationViewController, animated: true)
     }
+}
+
+extension HomeViewController{
     private func setLayout(){
         [friendLabel, settingButton, profileButton].forEach {
             view.addSubview($0)

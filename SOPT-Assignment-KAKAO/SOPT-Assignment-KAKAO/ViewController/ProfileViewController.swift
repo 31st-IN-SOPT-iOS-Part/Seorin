@@ -53,17 +53,19 @@ class ProfileViewController: UIViewController {
         button.addTarget(self, action: #selector(didTapBackButton), for: .touchUpInside)
         return button
     }()
+    
     @objc private func didTapBackButton(){
         self.dismiss(animated: true)
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemGray3
         profileViewControllerSetLayout()
     }
-    
+}
+
+extension ProfileViewController{
     private func profileViewControllerSetLayout(){
         [profileImageView, lineView, chatButton, editProfileButton, kakaoStoryButton, backButton].forEach {
             view.addSubview($0)
@@ -102,6 +104,5 @@ class ProfileViewController: UIViewController {
             make.width.height.equalTo(14)
         }
     }
-    
-    
+
 }

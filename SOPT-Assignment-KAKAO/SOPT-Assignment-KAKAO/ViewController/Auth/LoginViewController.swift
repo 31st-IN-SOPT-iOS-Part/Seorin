@@ -71,25 +71,54 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        [startLabel, explainLabel, emailTextField, passwordTextField, loginButton, signUpButton, findAccountLabel].forEach {
-            view.addSubview($0 as! UIView)
-        }
+        setLoginViewControllerLayout()
+        
         signUpButton.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        startLabel.frame = CGRect(x: 125, y: 100, width: view.width-250, height: 30)
-        explainLabel.frame = CGRect(x: 50, y: startLabel.bottom + 20, width: view.width - 100, height: 80)
-        emailTextField.frame = CGRect(x: 20, y: explainLabel.bottom+50, width: view.width-40, height: 50)
-        passwordTextField.frame = CGRect(x: 20, y: emailTextField.bottom+10, width: view.width-40, height: 50)
-        loginButton.frame = CGRect(x: 20, y: passwordTextField.bottom+20, width: view.width-40, height: 50)
-        signUpButton.frame = CGRect(x: 20, y: loginButton.bottom+10, width: view.width-40, height: 50)
-        findAccountLabel.frame = CGRect(x: 10, y: signUpButton.bottom+10, width: view.width-20, height: 30)
     }
 }
 extension LoginViewController : LoginCheckViewControllerDelegate{
     func dismissNavigationController(){
         self.navigationController?.dismiss(animated: true)
+    }
+}
+
+
+extension LoginViewController{
+    private func setLoginViewControllerLayout(){
+        [startLabel, explainLabel, emailTextField, passwordTextField, loginButton, signUpButton, findAccountLabel].forEach {
+            view.addSubview($0 as! UIView)
+        }
+        startLabel.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(40)
+            make.centerX.equalToSuperview()
+        }
+        explainLabel.snp.makeConstraints { make in
+            make.top.equalTo(startLabel.snp.bottom).offset(20)
+            make.centerX.equalToSuperview()
+        }
+        emailTextField.snp.makeConstraints { make in
+            make.top.equalTo(explainLabel.snp.bottom).offset(60)
+            make.leading.trailing.equalToSuperview().inset(21)
+            make.height.equalTo(49)
+        }
+        passwordTextField.snp.makeConstraints { make in
+            make.top.equalTo(emailTextField.snp.bottom).offset(10)
+            make.leading.trailing.equalToSuperview().inset(21)
+            make.height.equalTo(49)
+        }
+        loginButton.snp.makeConstraints { make in
+            make.top.equalTo(passwordTextField.snp.bottom).offset(35)
+            make.leading.trailing.equalToSuperview().inset(21)
+            make.height.equalTo(44)
+        }
+        signUpButton.snp.makeConstraints { make in
+            make.top.equalTo(loginButton.snp.bottom).offset(10)
+            make.leading.trailing.equalTo(loginButton)
+            make.height.equalTo(44)
+        }
+        findAccountLabel.snp.makeConstraints { make in
+            make.top.equalTo(signUpButton.snp.bottom).offset(15)
+            make.centerX.equalToSuperview()
+        }
     }
 }
