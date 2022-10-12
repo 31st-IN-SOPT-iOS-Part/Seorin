@@ -1,5 +1,10 @@
 import UIKit
 
+
+protocol LoginCheckViewControllerDelegate : AnyObject{
+    func dismissNavigationController()
+}
+
 class LoginCheckViewController: UIViewController {
     //MARK: UIView
     private let welcomeLabel : UILabel = {
@@ -12,13 +17,18 @@ class LoginCheckViewController: UIViewController {
     private let confirmBtn : UIButton = {
         let button = UIButton()
         button.configureButton(title: "확인")
-        button.backgroundColor = .yellow
+        button.backgroundColor = .systemYellow
         return button
     }()
     //MARK: Objc function
     @objc private func didTapConfirmButton(){
         self.dismiss(animated: true)
+        print("hello")
+        print(delegate.self)
+        delegate?.dismissNavigationController()
     }
+    
+    public weak var delegate : LoginCheckViewControllerDelegate?
     
     //MARK: viewDidLoad
     override func viewDidLoad() {

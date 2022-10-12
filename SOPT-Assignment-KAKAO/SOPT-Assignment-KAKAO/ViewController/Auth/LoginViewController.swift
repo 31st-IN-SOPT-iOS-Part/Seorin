@@ -57,6 +57,7 @@ class LoginViewController: UIViewController {
         let vc = LoginCheckViewController()
         vc.modalPresentationStyle = .formSheet
         vc.configEmail(emailTextField.text ?? "")
+        vc.delegate = self
         present(vc, animated: true)
     }
     
@@ -66,18 +67,14 @@ class LoginViewController: UIViewController {
     
     
     
-    
     //MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        let component: [Any] = [startLabel, explainLabel, emailTextField, passwordTextField, loginButton, signUpButton, findAccountLabel]
-        
-        signUpButton.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
-        
-        component.forEach {
+        [startLabel, explainLabel, emailTextField, passwordTextField, loginButton, signUpButton, findAccountLabel].forEach {
             view.addSubview($0 as! UIView)
         }
+        signUpButton.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
     }
     
     override func viewDidLayoutSubviews() {
@@ -89,6 +86,10 @@ class LoginViewController: UIViewController {
         loginButton.frame = CGRect(x: 20, y: passwordTextField.bottom+20, width: view.width-40, height: 50)
         signUpButton.frame = CGRect(x: 20, y: loginButton.bottom+10, width: view.width-40, height: 50)
         findAccountLabel.frame = CGRect(x: 10, y: signUpButton.bottom+10, width: view.width-20, height: 30)
-        
+    }
+}
+extension LoginViewController : LoginCheckViewControllerDelegate{
+    func dismissNavigationController(){
+        self.navigationController?.dismiss(animated: true)
     }
 }

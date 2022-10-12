@@ -46,8 +46,8 @@ class SignUpViewController: UIViewController {
         let vc = LoginCheckViewController()
         vc.modalPresentationStyle = .formSheet
         vc.configEmail(emailTextField.text ?? "")
+        vc.delegate = self
         present(vc, animated: true)
-        self.navigationController?.popViewController(animated: false)
     }
 
     //MARK: viewDidLoad
@@ -59,9 +59,8 @@ class SignUpViewController: UIViewController {
         view.addSubview(passwordTextField)
         view.addSubview(passwordCheckTextField)
         view.addSubview(signUpConfirmButton)
-        
-        // Do any additional setup after loading the view.
     }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         startLabel.frame = CGRect(x: 125, y: 100, width: view.width-250, height: 30)
@@ -69,5 +68,12 @@ class SignUpViewController: UIViewController {
         passwordTextField.frame = CGRect(x: 20, y: emailTextField.bottom + 10, width: view.width-40, height: 50)
         passwordCheckTextField.frame = CGRect(x: 20, y: passwordTextField.bottom + 10, width: view.width-40, height: 50)
         signUpConfirmButton.frame = CGRect(x: 20, y: passwordCheckTextField.bottom + 20, width: view.width-40, height: 50)
+    }
+}
+
+extension SignUpViewController : LoginCheckViewControllerDelegate{
+    func dismissNavigationController(){
+//        self.navigationController?.popViewController(animated: false)
+        self.navigationController?.dismiss(animated: true)
     }
 }
