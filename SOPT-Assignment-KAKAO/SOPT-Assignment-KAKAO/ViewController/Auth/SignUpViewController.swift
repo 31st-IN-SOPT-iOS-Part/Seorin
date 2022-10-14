@@ -46,28 +46,55 @@ class SignUpViewController: UIViewController {
         let vc = LoginCheckViewController()
         vc.modalPresentationStyle = .formSheet
         vc.configEmail(emailTextField.text ?? "")
+        vc.delegate = self
         present(vc, animated: true)
-        self.navigationController?.popViewController(animated: false)
     }
 
     //MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        view.addSubview(startLabel)
-        view.addSubview(emailTextField)
-        view.addSubview(passwordTextField)
-        view.addSubview(passwordCheckTextField)
-        view.addSubview(signUpConfirmButton)
         
-        // Do any additional setup after loading the view.
+        setSignUpViewControllerLayout()
     }
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        startLabel.frame = CGRect(x: 125, y: 100, width: view.width-250, height: 30)
-        emailTextField.frame = CGRect(x: 20, y: startLabel.bottom + 100, width: view.width-40, height: 50)
-        passwordTextField.frame = CGRect(x: 20, y: emailTextField.bottom + 10, width: view.width-40, height: 50)
-        passwordCheckTextField.frame = CGRect(x: 20, y: passwordTextField.bottom + 10, width: view.width-40, height: 50)
-        signUpConfirmButton.frame = CGRect(x: 20, y: passwordCheckTextField.bottom + 20, width: view.width-40, height: 50)
+    
+}
+
+extension SignUpViewController : LoginCheckViewControllerDelegate{
+    func dismissNavigationController(){
+        self.navigationController?.dismiss(animated: true)
     }
+}
+
+extension SignUpViewController{
+    private func setSignUpViewControllerLayout(){
+        [startLabel, emailTextField, passwordTextField, passwordCheckTextField, signUpConfirmButton].forEach {
+            view.addSubview($0)
+        }
+        startLabel.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(40)
+            make.centerX.equalToSuperview()
+        }
+        emailTextField.snp.makeConstraints { make in
+            make.top.equalTo(startLabel.snp.bottom).offset(116)
+            make.leading.trailing.equalToSuperview().inset(21)
+            make.height.equalTo(49)
+        }
+        passwordTextField.snp.makeConstraints { make in
+            make.top.equalTo(emailTextField.snp.bottom).offset(10)
+            make.leading.trailing.equalToSuperview().inset(21)
+            make.height.equalTo(49)
+        }
+        passwordCheckTextField.snp.makeConstraints { make in
+            make.top.equalTo(passwordTextField.snp.bottom).offset(10)
+            make.leading.trailing.equalToSuperview().inset(21)
+            make.height.equalTo(49)
+        }
+        signUpConfirmButton.snp.makeConstraints { make in
+            make.top.equalTo(passwordCheckTextField.snp.bottom).offset(26)
+            make.leading.trailing.equalToSuperview().inset(21)
+            make.height.equalTo(44)
+        }
+    }
+
 }
