@@ -32,6 +32,7 @@ class SignUpViewController: UIViewController {
     }()
     
     
+    
     private let signUpConfirmButton : UIButton = {
         let button = UIButton()
         button.configureButton(title: "새로운 카카오계정 만들기")
