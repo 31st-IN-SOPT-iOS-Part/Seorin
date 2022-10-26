@@ -5,7 +5,7 @@ protocol LoginCheckViewControllerDelegate : AnyObject{
     func dismissNavigationController()
 }
 
-class LoginCheckViewController: UIViewController {
+final class LoginCheckViewController: UIViewController {
     //MARK: UIView
     private let welcomeLabel : UILabel = {
         let label = UILabel()
@@ -23,7 +23,6 @@ class LoginCheckViewController: UIViewController {
     //MARK: Objc function
     @objc private func didTapConfirmButton(){
         self.dismiss(animated: true)
-        print("hello")
         print(delegate.self)
         delegate?.dismissNavigationController()
     }
@@ -46,6 +45,9 @@ class LoginCheckViewController: UIViewController {
 
 
 extension LoginCheckViewController{
+    func abc()->Int{
+        return 1
+    }
     private func setLoginCheckViewControllerLayout(){
         view.addSubview(welcomeLabel)
         view.addSubview(confirmBtn)

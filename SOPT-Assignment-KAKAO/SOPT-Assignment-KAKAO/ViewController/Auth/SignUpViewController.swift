@@ -6,38 +6,27 @@
 //
 
 import UIKit
+import Then
 
-class SignUpViewController: UIViewController {
+final class SignUpViewController: UIViewController {
     //MARK: UIView
-    private let startLabel : UILabel = {
-        let label = UILabel()
-        label.text = "카카오톡을 시작합니다"
-        label.font = .systemFont(ofSize: 20)
-        return label
-    }()
-    private let emailTextField : UITextField = {
-        let textField = UITextField()
-        textField.configureTextField(placeholder: "이메일 또는 전화번호")
-        return textField
-    }()
-    private let passwordTextField : UITextField = {
-        let textField = UITextField()
-        textField.configureTextField(placeholder: "비밀번호")
-        return textField
-    }()
-    private let passwordCheckTextField : UITextField = {
-        let textField = UITextField()
-        textField.configureTextField(placeholder: "비밀번호 확인")
-        return textField
-    }()
+    private let startLabel = UILabel().then{
+        $0.text = "카카오톡을 시작합니다"
+        $0.font = .systemFont(ofSize: 20)
+    }
+    private let emailTextField = LogintextField(frame: .zero, "이메일 또는 전화번호")
     
+    private let passwordTextField = LogintextField(frame: .zero, "비밀번호").then{
+        $0.isSecureTextEntry = true
+    }
+    private let passwordCheckTextField = LogintextField(frame: .zero, "비밀번호 확인").then{
+        $0.isSecureTextEntry = true
+    }
     
-    private let signUpConfirmButton : UIButton = {
-        let button = UIButton()
-        button.configureButton(title: "새로운 카카오계정 만들기")
-        button.addTarget(self, action: #selector(didTapSignUpConfirmButton), for: .touchUpInside)
-        return button
-    }()
+    private let signUpConfirmButton = UIButton().then{
+        $0.configureButton(title: "새로운 카카오계정 만들기")
+        $0.addTarget(self, action: #selector(didTapSignUpConfirmButton), for: .touchUpInside)
+    }
     
     
     

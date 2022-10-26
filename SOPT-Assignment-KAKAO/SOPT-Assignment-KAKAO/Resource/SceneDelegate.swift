@@ -23,10 +23,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 let window = UIWindow(windowScene: windowScene)
                 window.overrideUserInterfaceStyle = UIUserInterfaceStyle.light
                 
-                let rootVC = HomeViewController()
+                let rootVC = FriendViewController()
                 let navigationController = UINavigationController(rootViewController: rootVC)
                 
-                window.rootViewController = navigationController
+                let mainVC = MainTabBarController()
+                
+                window.rootViewController = mainVC
                 window.makeKeyAndVisible()
                 self.window = window
             }
