@@ -19,6 +19,10 @@ final class MainTabBarController: UITabBarController {
     }
     
     private func setUpTabBar() {
+        tabBar.backgroundColor = .white
+        tabBar.barStyle = .default
+        tabBar.layer.cornerRadius = 5
+        
         var firstViewController = UINavigationController(rootViewController: FriendViewController())
         var secondViewController = UINavigationController(rootViewController: ChatViewController())
         var thirdViewController = UINavigationController(rootViewController: FeedViewController())
@@ -32,9 +36,13 @@ final class MainTabBarController: UITabBarController {
         
         firstViewController.tabBarItem.selectedImage = UIImage(systemName: "person.fill") // TabBar Item 의 이미지
         secondViewController.tabBarItem.selectedImage = UIImage(systemName: "message.fill") // TabBar Item 의 이미지
-//        thirdViewController.tabBarItem.selectedImage = UIImage(systemName: "grid") // TabBar Item 의 이미지
+        thirdViewController.tabBarItem.selectedImage = UIImage(systemName: "grid") // TabBar Item 의 이미지
         fourthViewController.tabBarItem.selectedImage = UIImage(systemName: "bag.fill") // TabBar Item 의 이미지
+        fifthViewController.tabBarItem.selectedImage = UIImage(systemName: "ellipsis")
+        
         viewControllers = [firstViewController, secondViewController, thirdViewController, fourthViewController, fifthViewController]
+        
+
         
     }
 }
