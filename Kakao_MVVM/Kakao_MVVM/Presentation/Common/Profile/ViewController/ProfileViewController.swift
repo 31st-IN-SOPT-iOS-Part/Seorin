@@ -6,53 +6,30 @@
 //
 
 import UIKit
+import SnapKit
+import Then
 
-class ProfileViewController: UIViewController {
-    private let profileImageView : UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "profileImage")
-        return imageView
-    }()
+final class ProfileViewController: UIViewController {
+    private let profileImageView = UIImageView().then {
+        $0.contentMode = .scaleAspectFit
+    }
+    private let profileNameLabel = UILabel().then{
+        $0.textColor = .white
+        $0.font = .systemFont(ofSize: 18)
+    }
     
-    private let lineView : UIView = {
-        let line = UIView()
-        line.backgroundColor = .white
-        return line
-    }()
-    private let chatButton : UIButton = {
-        let button = UIButton()
-        button.tintColor = .white
-        button.setImage(UIImage(systemName: "message.fill"), for: .normal)
-        button.setTitle("나와의 채팅", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize:15)
-        button.alignTextBelow()
-        return button
-    }()
-    private let editProfileButton : UIButton = {
-        let button = UIButton()
-        button.tintColor = .white
-        button.setImage(UIImage(named: "profile_editImg"), for: .normal)
-        button.setTitle("프로필 편집", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize:15)
-        button.alignTextBelow()
-        return button
-    }()
-    private let kakaoStoryButton : UIButton = {
-        let button = UIButton()
-        button.tintColor = .white
-        button.setImage(UIImage(named: "profileStoryImg"), for: .normal)
-        button.setTitle("카카오스토리", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize:15)
-        button.alignTextBelow()
-        return button
-    }()
-    private let backButton : UIButton = {
-        let button = UIButton()
-        button.tintColor = .white
-        button.setImage(UIImage(systemName: "xmark"), for: .normal)
-        button.addTarget(self, action: #selector(didTapBackButton), for: .touchUpInside)
-        return button
-    }()
+    private let lineView = UIView().then{
+        $0.backgroundColor = .white
+    }
+    private let chatButton = ProfileButton(frame: .zero, profileButtonType: .chatButton)
+    private let editProfileButton = ProfileButton(frame: .zero, profileButtonType: .editButton)
+    private let kakaoStoryButton = ProfileButton(frame: .zero, profileButtonType: .kakaoStoryButton)
+    
+    private let backButton = UIButton().then{
+        $0.tintColor = .white
+        $0.setImage(UIImage(systemName: "xmark"), for: .normal)
+        $0.addTarget(self, action: #selector(didTapBackButton), for: .touchUpInside)
+    }
     
     @objc private func didTapBackButton(){
         self.dismiss(animated: true)
@@ -66,8 +43,20 @@ class ProfileViewController: UIViewController {
 }
 
 extension ProfileViewController{
+    public func setProfile(user: User, userType: UserType){
+        profileImageView.image = user.profileImg
+        profileNameLabel.text = user.name
+        if(userType == .owner){
+            chatButton.setTitle("나와의 채팅", for: .normal)
+            chatButton.alignTextBelow()
+        }else{
+            chatButton.setTitle("1:1 채팅", for: .normal)
+            chatButton.alignTextBelow()
+        }
+    }
+    
     private func profileViewControllerSetLayout(){
-        [profileImageView, lineView, chatButton, editProfileButton, kakaoStoryButton, backButton].forEach {
+        [profileImageView, profileNameLabel, lineView, chatButton, editProfileButton, kakaoStoryButton, backButton].forEach {
             view.addSubview($0)
         }
         profileImageView.snp.makeConstraints { make in
@@ -75,6 +64,12 @@ extension ProfileViewController{
             make.centerX.equalToSuperview()
             make.width.height.equalTo(97)
         }
+        
+        profileNameLabel.snp.makeConstraints { make in
+            make.centerX.equalTo(profileImageView)
+            make.top.equalTo(profileImageView.snp.bottom).offset(8)
+        }
+        
         lineView.snp.makeConstraints { make in
             make.top.equalTo(profileImageView.snp.bottom).offset(71)
             make.leading.trailing.equalToSuperview()

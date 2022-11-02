@@ -23,7 +23,6 @@ class LoginConfirmViewController: UIViewController {
     //MARK: Objc function
     @objc private func didTapConfirmButton(){
         self.dismiss(animated: true)
-        print("hello")
         print(delegate.self)
         delegate?.dismissNavigationController()
     }
@@ -59,4 +58,5 @@ extension LoginConfirmViewController{
             make.height.equalTo(44)
         }
     }
+    
 }

@@ -12,7 +12,6 @@ import SnapKit
 
 final class LogintextField : UITextField{
     let underLineView = UIView().then{
-//        $0.backgroundColor = .systemGray4
         $0.backgroundColor = .systemGray4
     }
                           
