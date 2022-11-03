@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 
-class FriendViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     let friendLabel : UILabel = {
         let lable = UILabel()
@@ -52,7 +52,7 @@ class FriendViewController: UIViewController {
     }
 }
 
-extension FriendViewController{
+extension HomeViewController{
     private func setLayout(){
         [friendLabel, settingButton, profileButton].forEach {
             view.addSubview($0)
