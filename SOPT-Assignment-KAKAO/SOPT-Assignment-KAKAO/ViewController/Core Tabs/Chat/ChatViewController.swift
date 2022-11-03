@@ -6,6 +6,11 @@
 //
 
 import UIKit
+import Then
+enum ChattingViewCase{
+    case chatting
+    case openChatting
+}
 
 final class ChatViewController: UIViewController {
     private let chattingButton = UIButton().then{
@@ -40,11 +45,33 @@ final class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayout()
+        chatViewControllerButtonConfigure()
         
     }
 }
 
 extension ChatViewController{
+    private func chatViewControllerButtonConfigure(){
+        chattingButton.addTarget(self, action: #selector(didTapChattingButton), for: .touchUpInside)
+        openChattingButton.addTarget(self, action: #selector(didTapOpenChattingButton), for: .touchUpInside)
+        plusButton.addTarget(self, action: #selector(didTapPlusButton), for: .touchUpInside)
+    }
+    @objc private func didTapChattingButton(){
+        chattingButton.setTitleColor(.black, for: .normal)
+        openChattingButton.setTitleColor(.gray, for: .normal)
+        //Scroll Viwe 좌표 바꾸기
+    }
+    @objc private func didTapOpenChattingButton(){
+        chattingButton.setTitleColor(.gray, for: .normal)
+        openChattingButton.setTitleColor(.black, for: .normal)
+        //Scroll Viwe 좌표 바꾸기
+    }
+    @objc private func didTapPlusButton(){
+        let vc = PhotoViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
+    
     //MARK: - Layout Helper
     private func setLayout(){
         view.backgroundColor = .white
@@ -70,7 +97,7 @@ extension ChatViewController{
             make.trailing.equalTo(settingButton.snp.leading).offset(-12)
             make.height.width.equalTo(19)
         }
-        //MARK: - !!!
+        
         view.addSubview(scrollView)
         [chattingView, openChattingView].forEach {
             scrollView.addSubview($0)
