@@ -40,12 +40,14 @@ final class FriendViewController: UIViewController {
     private lazy var friendsTableView = UITableView().then{
         $0.register(FriendTableViewCell.self)
         $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.separatorStyle = .none
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addConfigure()
-//        loginInit()
+        loginInit()
         setLayout()
     }
 }
@@ -117,5 +119,41 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource{
             vc.setProfile(user: users[indexPath.row-1], userType: .friend)
         }
         present(vc, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        if (indexPath.row==0){ return UISwipeActionsConfiguration()}
+        
+        let favoriteActions = UIContextualAction(style: .normal, title: "", handler: { action, view, completionHandler in
+            completionHandler(true)
+        })
+        favoriteActions.backgroundColor = .systemBlue
+        favoriteActions.image = UIImage(systemName: "star")
+        return UISwipeActionsConfiguration(actions: [favoriteActions])
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        if (indexPath.row==0){ return UISwipeActionsConfiguration()}
+        
+        let hideAction = UIContextualAction(style: .normal, title: "숨김") { action, view, completionHandler in
+            for index in (indexPath.row-1..<self.users.count-1){
+                self.users[index] = self.users[index+1]
+            }
+            self.users.removeLast()
+            tableView.reloadData()
+            completionHandler(true)
+        }
+        
+        hideAction.backgroundColor = .systemGray
+        let deleteAction = UIContextualAction(style: .destructive, title: "삭제") { action, view, completionHandler in
+            for index in (indexPath.row-1..<self.users.count-1){
+                self.users[index] = self.users[index+1]
+            }
+            self.users.removeLast()
+            tableView.reloadData()
+            completionHandler(true)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction, hideAction])
     }
 }

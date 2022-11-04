@@ -10,7 +10,7 @@ import UIKit
 class OpenChattingView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .red
+        backgroundColor = .white
     }
     
     required init?(coder: NSCoder) {
