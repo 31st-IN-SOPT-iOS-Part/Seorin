@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522D8FB32906532400A0B9F0 /* UIView +.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D8FB22906532400A0B9F0 /* UIView +.swift */; };
+		522D8FB52906534A00A0B9F0 /* UICollectionView +.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D8FB42906534A00A0B9F0 /* UICollectionView +.swift */; };
+		522D8FB72906535F00A0B9F0 /* UITableView +.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D8FB62906535F00A0B9F0 /* UITableView +.swift */; };
+		522D8FBA2906564000A0B9F0 /* ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D8FB92906564000A0B9F0 /* ImageName.swift */; };
+		522D8FBD29066A2500A0B9F0 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D8FBC29066A2500A0B9F0 /* FriendTableViewCell.swift */; };
+		522D8FC12907A3B900A0B9F0 /* ChattingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D8FC02907A3B900A0B9F0 /* ChattingView.swift */; };
+		522D8FC32907A3C100A0B9F0 /* OpenChattingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D8FC22907A3C100A0B9F0 /* OpenChattingView.swift */; };
+		522D8FC72907AD0200A0B9F0 /* ChattingTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D8FC62907AD0200A0B9F0 /* ChattingTableViewHeaderView.swift */; };
+		522D8FCA2907B7CB00A0B9F0 /* ChattingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D8FC92907B7CB00A0B9F0 /* ChattingTableViewCell.swift */; };
+		522D8FCC2907BE8300A0B9F0 /* Chatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D8FCB2907BE8300A0B9F0 /* Chatting.swift */; };
+		522D8FCE2907C61F00A0B9F0 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D8FCD2907C61F00A0B9F0 /* ProfileButton.swift */; };
+		524F2FDF29125584006B8735 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F2FDE29125584006B8735 /* PhotoViewController.swift */; };
+		524F2FE229125E5E006B8735 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F2FE129125E5E006B8735 /* PhotoCollectionViewCell.swift */; };
+		52A3B4F82905139D00983366 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A3B4F72905139D00983366 /* FeedViewController.swift */; };
+		52A3B4FA290513A900983366 /* ShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A3B4F9290513A900983366 /* ShoppingViewController.swift */; };
+		52A3B4FC290513B500983366 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A3B4FB290513B500983366 /* MoreViewController.swift */; };
+		52A3B4FE290514CC00983366 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A3B4FD290514CC00983366 /* MainTabBarController.swift */; };
+		52A3B5022905218E00983366 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A3B5012905218E00983366 /* LoginTextField.swift */; };
+		52A3B5052905246400983366 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 52A3B5042905246400983366 /* Then */; };
+		52A3B5082905247300983366 /* SwiftyColor in Frameworks */ = {isa = PBXBuildFile; productRef = 52A3B5072905247300983366 /* SwiftyColor */; };
+		52A3B50A29052B8200983366 /* ConsoleLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A3B50929052B8200983366 /* ConsoleLog.swift */; };
+		52A3B50D2905308F00983366 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A3B50C2905308F00983366 /* User.swift */; };
+		52CA2AF129091BC900FA727A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA2AF029091BC900FA727A /* ChatViewController.swift */; };
 		52CACA1C28F3FD6A001ADB19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CACA1B28F3FD6A001ADB19 /* AppDelegate.swift */; };
 		52CACA1E28F3FD6A001ADB19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CACA1D28F3FD6A001ADB19 /* SceneDelegate.swift */; };
 		52CACA2328F3FD6A001ADB19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CACA2128F3FD6A001ADB19 /* Main.storyboard */; };
@@ -15,13 +38,34 @@
 		52CACA3428F3FDEC001ADB19 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CACA3328F3FDEC001ADB19 /* LoginViewController.swift */; };
 		52CACA3628F3FDF4001ADB19 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CACA3528F3FDF4001ADB19 /* SignUpViewController.swift */; };
 		52CACA3828F3FDFD001ADB19 /* LoginCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CACA3728F3FDFD001ADB19 /* LoginCheckViewController.swift */; };
-		52CACA3A28F3FE20001ADB19 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CACA3928F3FE20001ADB19 /* Extensions.swift */; };
-		52CACA3D28F5CACD001ADB19 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CACA3C28F5CACD001ADB19 /* HomeViewController.swift */; };
+		52CACA3A28F3FE20001ADB19 /* Extensions +.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CACA3928F3FE20001ADB19 /* Extensions +.swift */; };
+		52CACA3D28F5CACD001ADB19 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CACA3C28F5CACD001ADB19 /* FriendViewController.swift */; };
 		52CACA3F28F5CADF001ADB19 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CACA3E28F5CADF001ADB19 /* ProfileViewController.swift */; };
 		52CACA4228F5CC38001ADB19 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 52CACA4128F5CC38001ADB19 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		522D8FB22906532400A0B9F0 /* UIView +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView +.swift"; sourceTree = "<group>"; };
+		522D8FB42906534A00A0B9F0 /* UICollectionView +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView +.swift"; sourceTree = "<group>"; };
+		522D8FB62906535F00A0B9F0 /* UITableView +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView +.swift"; sourceTree = "<group>"; };
+		522D8FB92906564000A0B9F0 /* ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageName.swift; sourceTree = "<group>"; };
+		522D8FBC29066A2500A0B9F0 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		522D8FC02907A3B900A0B9F0 /* ChattingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingView.swift; sourceTree = "<group>"; };
+		522D8FC22907A3C100A0B9F0 /* OpenChattingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenChattingView.swift; sourceTree = "<group>"; };
+		522D8FC62907AD0200A0B9F0 /* ChattingTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingTableViewHeaderView.swift; sourceTree = "<group>"; };
+		522D8FC92907B7CB00A0B9F0 /* ChattingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingTableViewCell.swift; sourceTree = "<group>"; };
+		522D8FCB2907BE8300A0B9F0 /* Chatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chatting.swift; sourceTree = "<group>"; };
+		522D8FCD2907C61F00A0B9F0 /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButton.swift; sourceTree = "<group>"; };
+		524F2FDE29125584006B8735 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		524F2FE129125E5E006B8735 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		52A3B4F72905139D00983366 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		52A3B4F9290513A900983366 /* ShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewController.swift; sourceTree = "<group>"; };
+		52A3B4FB290513B500983366 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		52A3B4FD290514CC00983366 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		52A3B5012905218E00983366 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		52A3B50929052B8200983366 /* ConsoleLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleLog.swift; sourceTree = "<group>"; };
+		52A3B50C2905308F00983366 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		52CA2AF029091BC900FA727A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		52CACA1828F3FD6A001ADB19 /* SOPT-Assignment-KAKAO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOPT-Assignment-KAKAO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CACA1B28F3FD6A001ADB19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52CACA1D28F3FD6A001ADB19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,8 +76,8 @@
 		52CACA3328F3FDEC001ADB19 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		52CACA3528F3FDF4001ADB19 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		52CACA3728F3FDFD001ADB19 /* LoginCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCheckViewController.swift; sourceTree = "<group>"; };
-		52CACA3928F3FE20001ADB19 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		52CACA3C28F5CACD001ADB19 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		52CACA3928F3FE20001ADB19 /* Extensions +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions +.swift"; sourceTree = "<group>"; };
+		52CACA3C28F5CACD001ADB19 /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 		52CACA3E28F5CADF001ADB19 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,12 +87,169 @@
 			buildActionMask = 2147483647;
 			files = (
 				52CACA4228F5CC38001ADB19 /* SnapKit in Frameworks */,
+				52A3B5082905247300983366 /* SwiftyColor in Frameworks */,
+				52A3B5052905246400983366 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		522D8FB12906530A00A0B9F0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52CACA3928F3FE20001ADB19 /* Extensions +.swift */,
+				522D8FB22906532400A0B9F0 /* UIView +.swift */,
+				522D8FB42906534A00A0B9F0 /* UICollectionView +.swift */,
+				522D8FB62906535F00A0B9F0 /* UITableView +.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		522D8FB8290654E400A0B9F0 /* NameSpace */ = {
+			isa = PBXGroup;
+			children = (
+				522D8FB92906564000A0B9F0 /* ImageName.swift */,
+			);
+			path = NameSpace;
+			sourceTree = "<group>";
+		};
+		522D8FBB29066A0E00A0B9F0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				522D8FBC29066A2500A0B9F0 /* FriendTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		522D8FBF2907A39D00A0B9F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				522D8FC02907A3B900A0B9F0 /* ChattingView.swift */,
+				522D8FC22907A3C100A0B9F0 /* OpenChattingView.swift */,
+				522D8FC62907AD0200A0B9F0 /* ChattingTableViewHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		522D8FC82907B7AF00A0B9F0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				522D8FC92907B7CB00A0B9F0 /* ChattingTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		524F2FDB291254DB006B8735 /* Core Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				52A3B4FD290514CC00983366 /* MainTabBarController.swift */,
+				52A3B4F02905110300983366 /* Friend */,
+				52A3B4F12905111400983366 /* Chat */,
+				52A3B4F22905111E00983366 /* Feed */,
+				52A3B4F32905112600983366 /* Shopping */,
+				52A3B4F42905113500983366 /* More */,
+			);
+			path = "Core Tabs";
+			sourceTree = "<group>";
+		};
+		524F2FDC2912551A006B8735 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				524F2FDD29125532006B8735 /* Photo */,
+				52CACA3B28F5CAA4001ADB19 /* Auth */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		524F2FDD29125532006B8735 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				524F2FE029125E44006B8735 /* Cell */,
+				524F2FDE29125584006B8735 /* PhotoViewController.swift */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		524F2FE029125E44006B8735 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				524F2FE129125E5E006B8735 /* PhotoCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		52A3B4F02905110300983366 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				522D8FBB29066A0E00A0B9F0 /* Cell */,
+				52CACA3C28F5CACD001ADB19 /* FriendViewController.swift */,
+				52CACA3E28F5CADF001ADB19 /* ProfileViewController.swift */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		52A3B4F12905111400983366 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				52CA2AF029091BC900FA727A /* ChatViewController.swift */,
+				522D8FC82907B7AF00A0B9F0 /* Cell */,
+				522D8FBF2907A39D00A0B9F0 /* View */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		52A3B4F22905111E00983366 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				52A3B4F72905139D00983366 /* FeedViewController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		52A3B4F32905112600983366 /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				52A3B4F9290513A900983366 /* ShoppingViewController.swift */,
+			);
+			path = Shopping;
+			sourceTree = "<group>";
+		};
+		52A3B4F42905113500983366 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				52A3B4FB290513B500983366 /* MoreViewController.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		52A3B4FF2905213400983366 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				522D8FB8290654E400A0B9F0 /* NameSpace */,
+				52A3B5002905217100983366 /* CustomView */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		52A3B5002905217100983366 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				52A3B5012905218E00983366 /* LoginTextField.swift */,
+				522D8FCD2907C61F00A0B9F0 /* ProfileButton.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		52A3B50B2905308500983366 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52A3B50C2905308F00983366 /* User.swift */,
+				522D8FCB2907BE8300A0B9F0 /* Chatting.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		52CACA0F28F3FD6A001ADB19 = {
 			isa = PBXGroup;
 			children = (
@@ -68,10 +269,11 @@
 		52CACA1A28F3FD6A001ADB19 /* SOPT-Assignment-KAKAO */ = {
 			isa = PBXGroup;
 			children = (
+				52A3B50B2905308500983366 /* Model */,
 				52CACA3128F3FDB1001ADB19 /* View */,
 				52CACA3028F3FD8A001ADB19 /* Resource */,
 				52CACA2F28F3FD80001ADB19 /* ViewController */,
-				52CACA2428F3FD6C001ADB19 /* Assets.xcassets */,
+				52A3B4FF2905213400983366 /* Util */,
 				52CACA2928F3FD6C001ADB19 /* Info.plist */,
 			);
 			path = "SOPT-Assignment-KAKAO";
@@ -80,9 +282,8 @@
 		52CACA2F28F3FD80001ADB19 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				52CACA3B28F5CAA4001ADB19 /* Auth */,
-				52CACA3C28F5CACD001ADB19 /* HomeViewController.swift */,
-				52CACA3E28F5CADF001ADB19 /* ProfileViewController.swift */,
+				524F2FDB291254DB006B8735 /* Core Tabs */,
+				524F2FDC2912551A006B8735 /* Other */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -90,9 +291,11 @@
 		52CACA3028F3FD8A001ADB19 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				522D8FB12906530A00A0B9F0 /* Extensions */,
 				52CACA1B28F3FD6A001ADB19 /* AppDelegate.swift */,
 				52CACA1D28F3FD6A001ADB19 /* SceneDelegate.swift */,
-				52CACA3928F3FE20001ADB19 /* Extensions.swift */,
+				52A3B50929052B8200983366 /* ConsoleLog.swift */,
+				52CACA2428F3FD6C001ADB19 /* Assets.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -142,6 +345,8 @@
 			name = "SOPT-Assignment-KAKAO";
 			packageProductDependencies = (
 				52CACA4128F5CC38001ADB19 /* SnapKit */,
+				52A3B5042905246400983366 /* Then */,
+				52A3B5072905247300983366 /* SwiftyColor */,
 			);
 			productName = "SOPT-Assignment-KAKAO";
 			productReference = 52CACA1828F3FD6A001ADB19 /* SOPT-Assignment-KAKAO.app */;
@@ -173,6 +378,8 @@
 			mainGroup = 52CACA0F28F3FD6A001ADB19;
 			packageReferences = (
 				52CACA4028F5CC38001ADB19 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				52A3B5032905246400983366 /* XCRemoteSwiftPackageReference "Then" */,
+				52A3B5062905247300983366 /* XCRemoteSwiftPackageReference "SwiftyColor" */,
 			);
 			productRefGroup = 52CACA1928F3FD6A001ADB19 /* Products */;
 			projectDirPath = "";
@@ -201,14 +408,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				522D8FC12907A3B900A0B9F0 /* ChattingView.swift in Sources */,
+				52A3B4FA290513A900983366 /* ShoppingViewController.swift in Sources */,
 				52CACA3428F3FDEC001ADB19 /* LoginViewController.swift in Sources */,
-				52CACA3A28F3FE20001ADB19 /* Extensions.swift in Sources */,
+				52CACA3A28F3FE20001ADB19 /* Extensions +.swift in Sources */,
+				52A3B4F82905139D00983366 /* FeedViewController.swift in Sources */,
+				522D8FCC2907BE8300A0B9F0 /* Chatting.swift in Sources */,
+				52A3B50D2905308F00983366 /* User.swift in Sources */,
+				522D8FB52906534A00A0B9F0 /* UICollectionView +.swift in Sources */,
+				522D8FBD29066A2500A0B9F0 /* FriendTableViewCell.swift in Sources */,
+				522D8FBA2906564000A0B9F0 /* ImageName.swift in Sources */,
 				52CACA1C28F3FD6A001ADB19 /* AppDelegate.swift in Sources */,
+				52A3B50A29052B8200983366 /* ConsoleLog.swift in Sources */,
 				52CACA1E28F3FD6A001ADB19 /* SceneDelegate.swift in Sources */,
 				52CACA3628F3FDF4001ADB19 /* SignUpViewController.swift in Sources */,
-				52CACA3D28F5CACD001ADB19 /* HomeViewController.swift in Sources */,
+				522D8FB32906532400A0B9F0 /* UIView +.swift in Sources */,
+				52A3B4FE290514CC00983366 /* MainTabBarController.swift in Sources */,
+				522D8FC32907A3C100A0B9F0 /* OpenChattingView.swift in Sources */,
+				52CACA3D28F5CACD001ADB19 /* FriendViewController.swift in Sources */,
+				524F2FE229125E5E006B8735 /* PhotoCollectionViewCell.swift in Sources */,
 				52CACA3F28F5CADF001ADB19 /* ProfileViewController.swift in Sources */,
+				52A3B4FC290513B500983366 /* MoreViewController.swift in Sources */,
+				522D8FCE2907C61F00A0B9F0 /* ProfileButton.swift in Sources */,
 				52CACA3828F3FDFD001ADB19 /* LoginCheckViewController.swift in Sources */,
+				522D8FCA2907B7CB00A0B9F0 /* ChattingTableViewCell.swift in Sources */,
+				52A3B5022905218E00983366 /* LoginTextField.swift in Sources */,
+				522D8FB72906535F00A0B9F0 /* UITableView +.swift in Sources */,
+				524F2FDF29125584006B8735 /* PhotoViewController.swift in Sources */,
+				52CA2AF129091BC900FA727A /* ChatViewController.swift in Sources */,
+				522D8FC72907AD0200A0B9F0 /* ChattingTableViewHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +656,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		52A3B5032905246400983366 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		52A3B5062905247300983366 /* XCRemoteSwiftPackageReference "SwiftyColor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/SwiftyColor";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		52CACA4028F5CC38001ADB19 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -439,6 +683,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		52A3B5042905246400983366 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52A3B5032905246400983366 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		52A3B5072905247300983366 /* SwiftyColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52A3B5062905247300983366 /* XCRemoteSwiftPackageReference "SwiftyColor" */;
+			productName = SwiftyColor;
+		};
 		52CACA4128F5CC38001ADB19 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 52CACA4028F5CC38001ADB19 /* XCRemoteSwiftPackageReference "SnapKit" */;
