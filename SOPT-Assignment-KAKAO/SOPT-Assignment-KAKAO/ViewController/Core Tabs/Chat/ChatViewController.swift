@@ -7,6 +7,8 @@
 
 import UIKit
 import Then
+import SwiftyColor
+
 enum ChattingViewCase{
     case chatting
     case openChatting

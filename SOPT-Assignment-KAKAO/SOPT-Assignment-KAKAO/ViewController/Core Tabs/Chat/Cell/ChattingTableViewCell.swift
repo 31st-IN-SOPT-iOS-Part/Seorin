@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftyColor
 
 final class ChattingTableViewCell: UITableViewCell {
     private let profileImageView = UIImageView().then {
