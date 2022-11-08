@@ -122,7 +122,6 @@ extension PhotoViewController: UICollectionViewDelegate, UICollectionViewDataSou
                 var selectedIndex: Int = 0
                 //선택된 사진의 selectionIndex 값 찾기
                 for index in (0..<selectedPhotos.count){
-//                (0..<selectedPhotos.count).forEach { index in
                     if(selectedPhotos[index].photoIndex == indexPath.row){
                         selectedIndex = selectedPhotos[index].selectionIndex
                         selectedPhotos[index].selectionIndex = 0
