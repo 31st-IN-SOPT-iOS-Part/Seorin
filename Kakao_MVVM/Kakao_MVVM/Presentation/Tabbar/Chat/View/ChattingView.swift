@@ -39,7 +39,8 @@ class ChattingView: UIView {
     
     private lazy var chattingTableView = UITableView(frame: .zero, style: .grouped).then {
         $0.register(ChattingTableViewHeaderView.self, forHeaderFooterViewReuseIdentifier: ChattingTableViewHeaderView.identifier)
-        $0.register(ChattingTableViewCell.self)
+//        $0.register(ChattingTableViewCell.self)
+        ChattingTableViewCell.register(target: $0)
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
     override init(frame: CGRect) {
@@ -71,7 +72,7 @@ extension ChattingView : UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = chattingTableView.dequeueReusableCell(withIdentifier: ChattingTableViewCell.identifier, for: indexPath) as? ChattingTableViewCell else { return UITableViewCell() }
+        guard let cell = chattingTableView.dequeueReusableCell(withIdentifier: ChattingTableViewCell.className, for: indexPath) as? ChattingTableViewCell else { return UITableViewCell() }
         cell.chattingRoomconfigure(chatting: chattings[indexPath.row])
         return cell
     }

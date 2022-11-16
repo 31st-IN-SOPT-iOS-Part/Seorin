@@ -22,16 +22,6 @@ final class SignUpViewController: UIViewController {
         $0.addTarget(self, action: #selector(didTapSignUpConfirmButton), for: .touchUpInside)
     }
     
-    
-    
-    //MARK: Objc function
-    @objc private func didTapSignUpConfirmButton(){
-        let vc = LoginConfirmViewController()
-        vc.modalPresentationStyle = .formSheet
-        vc.configEmail(emailTextField.text ?? "")
-        vc.delegate = self
-        present(vc, animated: true)
-    }
 
     //MARK: viewDidLoad
     override func viewDidLoad() {
@@ -43,13 +33,8 @@ final class SignUpViewController: UIViewController {
     
 }
 
-extension SignUpViewController : LoginConfirmViewControllerDelegate{
-    func dismissNavigationController(){
-        self.navigationController?.dismiss(animated: true)
-    }
-}
-
 extension SignUpViewController{
+    //MARK: - Layout Helper
     private func setSignUpViewControllerLayout(){
         [startLabel, emailTextField, passwordTextField, passwordCheckTextField, signUpConfirmButton].forEach {
             view.addSubview($0)
@@ -79,5 +64,19 @@ extension SignUpViewController{
             make.height.equalTo(44)
         }
     }
+    //MARK: Objc function
+    @objc private func didTapSignUpConfirmButton(){
+        let vc = LoginConfirmViewController()
+        vc.modalPresentationStyle = .formSheet
+        vc.configEmail(emailTextField.text ?? "")
+        vc.delegate = self
+        present(vc, animated: true)
+    }
 
+}
+
+extension SignUpViewController : LoginConfirmViewControllerDelegate{
+    func dismissNavigationController(){
+        self.navigationController?.dismiss(animated: true)
+    }
 }

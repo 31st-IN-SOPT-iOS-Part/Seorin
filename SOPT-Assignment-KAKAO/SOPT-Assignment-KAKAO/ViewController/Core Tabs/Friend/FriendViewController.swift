@@ -27,7 +27,11 @@ final class FriendViewController: UIViewController {
         User(name: "허솝트", profileImg: Image.profileImg[8]!, stateMessage: "살려줘요"),
         User(name: "허솝트", profileImg: Image.profileImg[8]!, stateMessage: "살려줘요"),
         User(name: "허솝트", profileImg: Image.profileImg[8]!, stateMessage: "살려줘요")
-    ]
+    ] {
+        didSet {
+            friendsTableView.reloadData()
+        }
+    }
     
     private let friendLabel = UILabel().then{
         $0.font = .systemFont(ofSize: 22, weight: .bold)
@@ -103,11 +107,7 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if(indexPath.row == 0){
-            return 73
-        }else{
-            return 50
-        }
+        indexPath.row == 0 ? 73 : 50
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -118,7 +118,7 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource{
         }else{
             vc.setProfile(user: users[indexPath.row-1], userType: .friend)
         }
-        present(vc, animated: true)
+        self.present(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {

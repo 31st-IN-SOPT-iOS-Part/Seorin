@@ -10,7 +10,7 @@ import Then
 
 final class LoginViewController: UIViewController {
 //MARK: UIView
-    private let startLabel = UILabel().then{
+    private let startLabel = UILabel().then {
         $0.text = "카카오톡을 시작합니다"
         $0.font = .systemFont(ofSize: 20)
     }
@@ -49,18 +49,15 @@ final class LoginViewController: UIViewController {
         present(vc, animated: true)
     }
     
-    @objc private func didTapSignUpButton(){
+    @objc private func didTapSignUpButton() {
         self.navigationController?.pushViewController(SignUpViewController(), animated: true)
     }
-    
-    
     
     //MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setLoginViewControllerLayout()
-        
         signUpButton.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
     }
 }

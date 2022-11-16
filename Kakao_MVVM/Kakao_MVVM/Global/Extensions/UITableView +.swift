@@ -8,12 +8,21 @@
 import Foundation
 import UIKit
 
-extension UITableViewCell: ReusableView {}
 
-extension UITableView{
-    func register<T: UITableViewCell>(_ cellClass: T.Type){
-        let identifier = T.identifier
-        self.register(T.self, forCellReuseIdentifier: identifier)
-    }
-}
+protocol UITableViewRegisterable {
+     static var isFromNib: Bool { get }
+     static func register(target: UITableView)
+ }
 
+ extension UITableViewRegisterable where Self: UITableViewCell {
+     static func register(target: UITableView) {
+         target.register(Self.self, forCellReuseIdentifier: Self.className)
+         /*
+         if self.isFromNib {
+             target.register(UINib(nibName: Self.className, bundle: nil), forCellReuseIdentifier: Self.className)
+         } else {
+             target.register(Self.self, forCellReuseIdentifier: Self.className)
+         }
+          */
+     }
+ }

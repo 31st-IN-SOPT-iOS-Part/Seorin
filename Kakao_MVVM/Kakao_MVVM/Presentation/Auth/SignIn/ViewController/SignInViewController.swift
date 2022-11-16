@@ -7,8 +7,13 @@
 
 import UIKit
 import Then
+import RxSwift
+import RxCocoa
 
 class SignInViewController: UIViewController {
+//    private var viewModel = SignInViewModel()
+    private let disposeBag = DisposeBag()
+    
     //MARK: UIView
         private let startLabel = UILabel().then{
             $0.text = "카카오톡을 시작합니다"
@@ -50,6 +55,13 @@ class SignInViewController: UIViewController {
         }
 }
 extension SignInViewController{
+    private func bindingRx(){
+//        emailTextField.rx.text
+//            .orEmpty
+//            .bind(to: idValue)
+    }
+    
+    
     private func setLoginViewControllerLayout(){
         [startLabel, explainLabel, emailTextField, passwordTextField, loginButton, signUpButton, findAccountLabel].forEach {
             view.addSubview($0 as! UIView)
@@ -106,3 +118,5 @@ extension SignInViewController : LoginConfirmViewControllerDelegate{
         self.navigationController?.dismiss(animated: true)
     }
 }
+
+

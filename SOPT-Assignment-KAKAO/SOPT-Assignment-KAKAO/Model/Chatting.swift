@@ -12,3 +12,5 @@ struct Chatting{
     var lastMessage: String
     var lastMessageTime : String
 }
+
+

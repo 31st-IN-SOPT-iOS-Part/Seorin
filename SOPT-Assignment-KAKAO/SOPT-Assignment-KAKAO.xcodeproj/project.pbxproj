@@ -32,7 +32,6 @@
 		52CA2AF129091BC900FA727A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA2AF029091BC900FA727A /* ChatViewController.swift */; };
 		52CACA1C28F3FD6A001ADB19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CACA1B28F3FD6A001ADB19 /* AppDelegate.swift */; };
 		52CACA1E28F3FD6A001ADB19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CACA1D28F3FD6A001ADB19 /* SceneDelegate.swift */; };
-		52CACA2328F3FD6A001ADB19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CACA2128F3FD6A001ADB19 /* Main.storyboard */; };
 		52CACA2528F3FD6C001ADB19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52CACA2428F3FD6C001ADB19 /* Assets.xcassets */; };
 		52CACA2828F3FD6C001ADB19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CACA2628F3FD6C001ADB19 /* LaunchScreen.storyboard */; };
 		52CACA3428F3FDEC001ADB19 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CACA3328F3FDEC001ADB19 /* LoginViewController.swift */; };
@@ -69,7 +68,6 @@
 		52CACA1828F3FD6A001ADB19 /* SOPT-Assignment-KAKAO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOPT-Assignment-KAKAO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CACA1B28F3FD6A001ADB19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52CACA1D28F3FD6A001ADB19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		52CACA2228F3FD6A001ADB19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52CACA2428F3FD6C001ADB19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52CACA2728F3FD6C001ADB19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52CACA2928F3FD6C001ADB19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -269,9 +267,9 @@
 		52CACA1A28F3FD6A001ADB19 /* SOPT-Assignment-KAKAO */ = {
 			isa = PBXGroup;
 			children = (
+				52CACA3028F3FD8A001ADB19 /* Resource */,
 				52A3B50B2905308500983366 /* Model */,
 				52CACA3128F3FDB1001ADB19 /* View */,
-				52CACA3028F3FD8A001ADB19 /* Resource */,
 				52CACA2F28F3FD80001ADB19 /* ViewController */,
 				52A3B4FF2905213400983366 /* Util */,
 				52CACA2928F3FD6C001ADB19 /* Info.plist */,
@@ -311,7 +309,6 @@
 		52CACA3228F3FDB8001ADB19 /* Storybaords */ = {
 			isa = PBXGroup;
 			children = (
-				52CACA2128F3FD6A001ADB19 /* Main.storyboard */,
 				52CACA2628F3FD6C001ADB19 /* LaunchScreen.storyboard */,
 			);
 			path = Storybaords;
@@ -397,7 +394,6 @@
 			files = (
 				52CACA2828F3FD6C001ADB19 /* LaunchScreen.storyboard in Resources */,
 				52CACA2528F3FD6C001ADB19 /* Assets.xcassets in Resources */,
-				52CACA2328F3FD6A001ADB19 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,14 +439,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		52CACA2128F3FD6A001ADB19 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				52CACA2228F3FD6A001ADB19 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		52CACA2628F3FD6C001ADB19 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

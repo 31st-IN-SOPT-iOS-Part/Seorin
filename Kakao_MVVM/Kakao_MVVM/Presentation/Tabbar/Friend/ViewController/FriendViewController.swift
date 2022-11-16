@@ -10,7 +10,7 @@ import SnapKit
 import Then
 
 final class FriendViewController: UIViewController {
-    var ownerUser = User(name: "유서린", stateMessage: "상태메세지는 여기에")
+    var ownerUser = User(name: "유서린", profileImg: Image.defaultProfileImage!, stateMessage: "상태메세지는 여기에")
     var users: [User] = [
         User(name: "안솝트", profileImg: Image.profileImg[0]!, stateMessage: "언제 볼건데?"),
         User(name: "최솝트", profileImg: Image.profileImg[1]!, stateMessage: "피곤해요"),
@@ -38,14 +38,14 @@ final class FriendViewController: UIViewController {
         $0.tintColor = .black
     }
     private lazy var friendsTableView = UITableView().then{
-        $0.register(FriendTableViewCell.self)
+        FriendTableViewCell.register(target: $0)
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addConfigure()
-//        loginInit()
+        loginInit()
         setLayout()
     }
 }
@@ -91,7 +91,7 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = friendsTableView.dequeueReusableCell(withIdentifier: FriendTableViewCell.identifier, for: indexPath) as? FriendTableViewCell else { return UITableViewCell() }
+        guard let cell = friendsTableView.dequeueReusableCell(withIdentifier: FriendTableViewCell.className, for: indexPath) as? FriendTableViewCell else { return UITableViewCell() }
         if(indexPath.row == 0){
             cell.configureUser(ownerUser, userType: .owner)
         }else{

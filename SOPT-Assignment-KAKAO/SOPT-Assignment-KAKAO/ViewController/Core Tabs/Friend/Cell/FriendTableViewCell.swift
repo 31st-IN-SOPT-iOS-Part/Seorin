@@ -8,7 +8,7 @@
 import UIKit
 import SwiftyColor
 
-enum UserType{
+enum UserType {
     case owner
     case friend
 }

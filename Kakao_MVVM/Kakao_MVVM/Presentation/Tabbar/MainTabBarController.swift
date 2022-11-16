@@ -41,9 +41,6 @@ final class MainTabBarController: UITabBarController {
         fifthViewController.tabBarItem.selectedImage = UIImage(systemName: "ellipsis")
         
         viewControllers = [firstViewController, secondViewController, thirdViewController, fourthViewController, fifthViewController]
-        
-
-        
     }
 }
 
