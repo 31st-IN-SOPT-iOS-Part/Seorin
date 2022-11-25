@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5204F298293006AC002051F2 /* LogInConfirmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204F297293006AC002051F2 /* LogInConfirmViewModel.swift */; };
 		521F1A25291A41710039A477 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 521F1A24291A41710039A477 /* .gitkeep */; };
 		521F1A2B291E20720039A477 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 521F1A2A291E20720039A477 /* Moya */; };
 		525379C2290276DB00682E0B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 525379C1290276DB00682E0B /* RxCocoa */; };
@@ -48,10 +49,10 @@
 		52B59C8F290A26F500844BE7 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B59C8E290A26F500844BE7 /* MoreViewController.swift */; };
 		52F42F39290A86E4005680BC /* FriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42F38290A86E4005680BC /* FriendViewModel.swift */; };
 		52F42F3B290AA645005680BC /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42F3A290AA645005680BC /* SignInViewModel.swift */; };
-		52F42F3D290AB137005680BC /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F42F3C290AB137005680BC /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5204F297293006AC002051F2 /* LogInConfirmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInConfirmViewModel.swift; sourceTree = "<group>"; };
 		521F1A24291A41710039A477 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		525379EB29027E0900682E0B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		525379ED29027E4500682E0B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +90,6 @@
 		52B59C8E290A26F500844BE7 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		52F42F38290A86E4005680BC /* FriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewModel.swift; sourceTree = "<group>"; };
 		52F42F3A290AA645005680BC /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
-		52F42F3C290AB137005680BC /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,7 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				525379EB29027E0900682E0B /* SignInViewController.swift */,
-				52F42F3C290AB137005680BC /* TestViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -273,6 +272,7 @@
 		525379E529027CBD00682E0B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5204F297293006AC002051F2 /* LogInConfirmViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -681,7 +681,7 @@
 				525379F62902809F00682E0B /* FriendViewController.swift in Sources */,
 				52B59C8D290A26D500844BE7 /* ShoppingViewController.swift in Sources */,
 				52B59C66290A207300844BE7 /* UITableView +.swift in Sources */,
-				52F42F3D290AB137005680BC /* TestViewController.swift in Sources */,
+				5204F298293006AC002051F2 /* LogInConfirmViewModel.swift in Sources */,
 				52B59C83290A265A00844BE7 /* ChattingTableViewCell.swift in Sources */,
 				525379F029027E7000682E0B /* LoginConfirmViewController.swift in Sources */,
 				52B59C58290A1F6A00844BE7 /* Chatting.swift in Sources */,

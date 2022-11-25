@@ -68,7 +68,7 @@ extension SignUpViewController{
     @objc private func didTapSignUpConfirmButton(){
         let vc = LoginConfirmViewController()
         vc.modalPresentationStyle = .formSheet
-        vc.configEmail(emailTextField.text ?? "")
+//        vc.configEmail(emailTextField.text ?? "")
         vc.delegate = self
         present(vc, animated: true)
     }

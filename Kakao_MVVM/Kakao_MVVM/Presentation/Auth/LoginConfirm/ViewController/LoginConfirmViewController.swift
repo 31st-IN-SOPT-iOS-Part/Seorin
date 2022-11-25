@@ -1,11 +1,15 @@
 import UIKit
-
+import RxSwift
+import RxCocoa
 
 protocol LoginConfirmViewControllerDelegate : AnyObject{
     func dismissNavigationController()
 }
 
 class LoginConfirmViewController: UIViewController {
+    
+    private let disposeBag = DisposeBag()
+    public var viewModel: LogInConfirmViewModel?
     //MARK: UIView
     private let welcomeLabel : UILabel = {
         let label = UILabel()
@@ -23,7 +27,6 @@ class LoginConfirmViewController: UIViewController {
     //MARK: Objc function
     @objc private func didTapConfirmButton(){
         self.dismiss(animated: true)
-        print(delegate.self)
         delegate?.dismissNavigationController()
     }
     
@@ -36,15 +39,23 @@ class LoginConfirmViewController: UIViewController {
         
         setLoginCheckViewControllerLayout()
         confirmBtn.addTarget(self, action: #selector(didTapConfirmButton), for: .touchUpInside)
+        
+        setDataBindRx()
     }
 
-    public func configEmail(_ email : String){
-        welcomeLabel.text = "\(email)님\n 환영합니다"
-    }
+//    public func configEmail(_ email : String){
+//        welcomeLabel.text = "\(email)님\n 환영합니다"
+//    }
 }
-
-
 extension LoginConfirmViewController{
+    private func setDataBindRx(){
+        viewModel?.loginUser
+            .map{
+                "\($0.email)님\n 환영합니다"
+            }
+            .bind(to: welcomeLabel.rx.text)
+            .disposed(by: disposeBag)
+    }
     private func setLoginCheckViewControllerLayout(){
         view.addSubview(welcomeLabel)
         view.addSubview(confirmBtn)
