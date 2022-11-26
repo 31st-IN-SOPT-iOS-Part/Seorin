@@ -39,7 +39,7 @@ struct SignInViewModel{
         login = loginTrying.asObserver()
         signUp = signUpTrying.asObserver()
         
-        Observable
+        let _ = Observable
             .combineLatest(fetchEmail, fetchPassword)
             .subscribe(onNext: {
                 fetchLoginUser.onNext(LoginUser(email: $0, password: $1))
@@ -47,10 +47,8 @@ struct SignInViewModel{
             .disposed(by: disposeBag)
         
         loginUser = loginTrying.withLatestFrom(fetchLoginUser)
-            .map{ $0 }
         
         
         showSignUpPage = signUpTrying
-//        loginUser = fetchLoginUser
     }
 }

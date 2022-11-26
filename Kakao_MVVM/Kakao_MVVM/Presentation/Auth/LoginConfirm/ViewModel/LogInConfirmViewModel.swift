@@ -13,25 +13,21 @@ struct LogInConfirmViewModel {
     let disposeBag = DisposeBag()
     
     //MARK: - Input
-//    public var userName: AnyObserver<String>
-//    public var userName: String
-    
     
     //MARK: - Output
     public let welcomeString: Observable<String>
     public var loginUser: Observable<LoginUser>
     
     init(loginUser: Observable<LoginUser>) {
-        
-        let getUserName = PublishSubject<String>()
         let welcomUser = PublishSubject<String>()
-        
         self.loginUser = loginUser
         
-        getUserName
-            .subscribe { userName in
-                welcomUser.onNext("\(userName)님 환영합니다!")
-            }
+        loginUser
+            .map{"\($0.email)님\n 환영합니다"}
+            .subscribe(onNext: {
+                welcomUser.onNext($0)
+            })
+            .disposed(by: disposeBag)
         
         welcomeString = welcomUser
     }

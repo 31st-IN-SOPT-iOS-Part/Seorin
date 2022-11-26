@@ -166,8 +166,8 @@
 		525379D629027C3400682E0B /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				525379DA29027C7400682E0B /* SignUp */,
 				525379D929027C6E00682E0B /* SignIn */,
+				525379DA29027C7400682E0B /* SignUp */,
 				525379D829027C6800682E0B /* LoginConfirm */,
 			);
 			path = Auth;
