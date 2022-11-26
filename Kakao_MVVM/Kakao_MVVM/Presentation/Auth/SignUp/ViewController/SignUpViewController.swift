@@ -1,8 +1,13 @@
 
 import UIKit
 import Then
+import RxSwift
+import RxCocoa
 
 final class SignUpViewController: UIViewController {
+    
+    private var viewModel: SignUpViewModel = SignUpViewModel()
+    private let disposeBag = DisposeBag()
     
     //MARK: UIView
     private let startLabel = UILabel()
@@ -17,11 +22,35 @@ final class SignUpViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         setLayout()
+        setDataBindingRx()
     }
 }
 
-extension SignUpViewController{
+extension SignUpViewController {
     
+    //MARK: - Data Binding RXSwift
+    private func setDataBindingRx() {
+        emailTextField.rx.text.orEmpty
+            .bind(to: viewModel.userEmail)
+            .disposed(by: disposeBag)
+        
+        passwordTextField.rx.text.orEmpty
+            .bind(to: viewModel.userPassword)
+            .disposed(by: disposeBag)
+        
+        passwordCheckTextField.rx.text.orEmpty
+            .bind(to: viewModel.checkUserPassword)
+            .disposed(by: disposeBag)
+        
+        signUpConfirmButton.rx.tap
+            .bind(to: viewModel.signUp)
+            .disposed(by: disposeBag)
+        
+        viewModel.isSamePW
+            .map { $0 ? UIColor.yellow : UIColor.systemGray4 }
+            .bind(to: signUpConfirmButton.rx.backgroundColor)
+            .disposed(by: disposeBag)
+    }
     private func setUI(){
         view.backgroundColor = .white
         startLabel.do {
@@ -40,6 +69,7 @@ extension SignUpViewController{
             $0.addTarget(self, action: #selector(didTapSignUpConfirmButton), for: .touchUpInside)
         }
     }
+    
     //MARK: - Layout Helper
     private func setLayout(){
         [startLabel, emailTextField, passwordTextField, passwordCheckTextField, signUpConfirmButton].forEach {
@@ -70,10 +100,12 @@ extension SignUpViewController{
             make.height.equalTo(44)
         }
     }
+    
     //MARK: Objc function
     @objc private func didTapSignUpConfirmButton(){
         let vc = LoginConfirmViewController()
         vc.modalPresentationStyle = .formSheet
+        vc.setDataBindRx( LogInConfirmViewModel(loginUser: viewModel.loginUser) )
         vc.delegate = self
         present(vc, animated: true)
     }

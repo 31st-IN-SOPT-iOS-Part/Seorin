@@ -33,6 +33,7 @@ final class SignInViewController: UIViewController {
     }
 }
 extension SignInViewController{
+    
     private func bindingRx(){
         emailTextField.rx.text.orEmpty
             .bind(to: signInViewModel.email)
@@ -74,6 +75,7 @@ extension SignInViewController{
             $0.textAlignment = .center
         }
     }
+    
     private func setLayout(){
         view.backgroundColor = .white
         [startLabel, explainLabel, emailTextField, passwordTextField, loginButton, signUpButton, findAccountLabel].forEach {

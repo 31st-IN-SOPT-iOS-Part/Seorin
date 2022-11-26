@@ -27,14 +27,14 @@ final class LoginConfirmViewController: UIViewController {
 }
 extension LoginConfirmViewController{
     
-    public func setDataBindRx(_ viewModel: LogInConfirmViewModel) {    
+    public func setDataBindRx(_ viewModel: LogInConfirmViewModel) {
         self.viewModel = viewModel
         self.viewModel?.welcomeString
             .bind(to: welcomeLabel.rx.text)
             .disposed(by: disposeBag)
     }
     
-    private func setUI(){
+    private func setUI() {
         view.backgroundColor = .white
         welcomeLabel.do {
             $0.numberOfLines = 2
@@ -46,7 +46,7 @@ extension LoginConfirmViewController{
             $0.backgroundColor = .systemYellow
         }
     }
-    private func setLayout(){
+    private func setLayout() {
         confirmBtn.addTarget(self, action: #selector(didTapConfirmButton), for: .touchUpInside)
         view.addSubview(welcomeLabel)
         view.addSubview(confirmBtn)
@@ -61,7 +61,7 @@ extension LoginConfirmViewController{
         }
     }
     //MARK: Objc function
-    @objc private func didTapConfirmButton(){
+    @objc private func didTapConfirmButton() {
         self.dismiss(animated: true)
         delegate?.dismissNavigationController()
     }

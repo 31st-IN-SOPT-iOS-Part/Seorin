@@ -21,7 +21,6 @@ struct SignInViewModel{
     public var email: AnyObserver<String>
     public var password: AnyObserver<String>
     public var login: AnyObserver<Void>
-    public var signUp: AnyObserver<Void>
 
     //MARK: - OUTPUT
     public var loginUser: Observable<LoginUser>
@@ -35,7 +34,7 @@ struct SignInViewModel{
         email = fetchEmail.asObserver()
         password = fetchPassword.asObserver()
         login = loginTrying.asObserver()
-        signUp = signUpTrying.asObserver()
+
         
         let _ = Observable
             .combineLatest(fetchEmail, fetchPassword)

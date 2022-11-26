@@ -12,10 +12,8 @@ struct LogInConfirmViewModel {
 
     let disposeBag = DisposeBag()
     
-    //MARK: - Input
-    
     //MARK: - Output
-    public let welcomeString: Observable<String>
+    public var welcomeString: Observable<String>
     public var loginUser: Observable<LoginUser>
     
     init(loginUser: Observable<LoginUser>) {
