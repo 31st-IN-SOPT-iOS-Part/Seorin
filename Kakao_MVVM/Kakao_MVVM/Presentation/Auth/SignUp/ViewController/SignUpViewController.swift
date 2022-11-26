@@ -3,39 +3,45 @@ import UIKit
 import Then
 
 final class SignUpViewController: UIViewController {
+    
     //MARK: UIView
-    private let startLabel = UILabel().then{
-        $0.text = "카카오톡을 시작합니다"
-        $0.font = .systemFont(ofSize: 20)
-    }
+    private let startLabel = UILabel()
     private let emailTextField = LogintextField(frame: .zero, "이메일 또는 전화번호")
-    
-    private let passwordTextField = LogintextField(frame: .zero, "비밀번호").then{
-        $0.isSecureTextEntry = true
-    }
-    private let passwordCheckTextField = LogintextField(frame: .zero, "비밀번호 확인").then{
-        $0.isSecureTextEntry = true
-    }
-    
-    private let signUpConfirmButton = UIButton().then{
-        $0.configureButton(title: "새로운 카카오계정 만들기")
-        $0.addTarget(self, action: #selector(didTapSignUpConfirmButton), for: .touchUpInside)
-    }
+    private let passwordTextField = LogintextField(frame: .zero, "비밀번호")
+    private let passwordCheckTextField = LogintextField(frame: .zero, "비밀번호 확인")
+    private let signUpConfirmButton = UIButton()
     
 
     //MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        
-        setSignUpViewControllerLayout()
+        setUI()
+        setLayout()
     }
-    
 }
 
 extension SignUpViewController{
+    
+    private func setUI(){
+        view.backgroundColor = .white
+        startLabel.do {
+            $0.text = "카카오톡을 시작합니다"
+            $0.font = .systemFont(ofSize: 20)
+        }
+        passwordTextField.do {
+            $0.isSecureTextEntry = true
+        }
+        passwordCheckTextField.do {
+            $0.isSecureTextEntry = true
+        }
+        
+        signUpConfirmButton.do {
+            $0.configureButton(title: "새로운 카카오계정 만들기")
+            $0.addTarget(self, action: #selector(didTapSignUpConfirmButton), for: .touchUpInside)
+        }
+    }
     //MARK: - Layout Helper
-    private func setSignUpViewControllerLayout(){
+    private func setLayout(){
         [startLabel, emailTextField, passwordTextField, passwordCheckTextField, signUpConfirmButton].forEach {
             view.addSubview($0)
         }
@@ -68,7 +74,6 @@ extension SignUpViewController{
     @objc private func didTapSignUpConfirmButton(){
         let vc = LoginConfirmViewController()
         vc.modalPresentationStyle = .formSheet
-//        vc.configEmail(emailTextField.text ?? "")
         vc.delegate = self
         present(vc, animated: true)
     }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5204F298293006AC002051F2 /* LogInConfirmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204F297293006AC002051F2 /* LogInConfirmViewModel.swift */; };
-		521F1A25291A41710039A477 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 521F1A24291A41710039A477 /* .gitkeep */; };
 		521F1A2B291E20720039A477 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 521F1A2A291E20720039A477 /* Moya */; };
 		525379C2290276DB00682E0B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 525379C1290276DB00682E0B /* RxCocoa */; };
 		525379C4290276DB00682E0B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 525379C3290276DB00682E0B /* RxSwift */; };
@@ -25,6 +24,7 @@
 		528B30522902756B00DD376E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528B30512902756B00DD376E /* SceneDelegate.swift */; };
 		528B30592902756D00DD376E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528B30582902756D00DD376E /* Assets.xcassets */; };
 		528B305C2902756D00DD376E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528B305A2902756D00DD376E /* LaunchScreen.storyboard */; };
+		528E289629324B1400886841 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E289529324B1400886841 /* SignUpViewModel.swift */; };
 		529FE3A3292539D000A8D7AE /* NSObject +.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529FE3A2292539D000A8D7AE /* NSObject +.swift */; };
 		529FE3A5292539EA00A8D7AE /* UIButton +.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529FE3A4292539EA00A8D7AE /* UIButton +.swift */; };
 		529FE3A729253A0500A8D7AE /* Int +.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529FE3A629253A0500A8D7AE /* Int +.swift */; };
@@ -53,7 +53,6 @@
 
 /* Begin PBXFileReference section */
 		5204F297293006AC002051F2 /* LogInConfirmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInConfirmViewModel.swift; sourceTree = "<group>"; };
-		521F1A24291A41710039A477 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		525379EB29027E0900682E0B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		525379ED29027E4500682E0B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		525379EF29027E7000682E0B /* LoginConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfirmViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 		528B30582902756D00DD376E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		528B305B2902756D00DD376E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		528B305D2902756D00DD376E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		528E289529324B1400886841 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		529FE3A2292539D000A8D7AE /* NSObject +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject +.swift"; sourceTree = "<group>"; };
 		529FE3A4292539EA00A8D7AE /* UIButton +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton +.swift"; sourceTree = "<group>"; };
 		529FE3A629253A0500A8D7AE /* Int +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int +.swift"; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 		521F1A23291A41060039A477 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				521F1A24291A41710039A477 /* .gitkeep */,
+				528E289529324B1400886841 /* SignUpViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -660,7 +660,6 @@
 			files = (
 				528B305C2902756D00DD376E /* LaunchScreen.storyboard in Resources */,
 				528B30592902756D00DD376E /* Assets.xcassets in Resources */,
-				521F1A25291A41710039A477 /* .gitkeep in Resources */,
 				529FE3A929253D8700A8D7AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -703,6 +702,7 @@
 				52B59C7E290A260400844BE7 /* FriendTableViewCell.swift in Sources */,
 				52B59C80290A264000844BE7 /* ChatViewController.swift in Sources */,
 				52B59C5E290A1FF400844BE7 /* LoginTextField.swift in Sources */,
+				528E289629324B1400886841 /* SignUpViewModel.swift in Sources */,
 				52B59C89290A268400844BE7 /* ChattingTableViewHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

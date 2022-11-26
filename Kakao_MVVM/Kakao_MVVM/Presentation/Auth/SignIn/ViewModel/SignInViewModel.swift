@@ -25,14 +25,12 @@ struct SignInViewModel{
 
     //MARK: - OUTPUT
     public var loginUser: Observable<LoginUser>
-    public var showSignUpPage: Observable<Void>
     
     init() {
         let fetchEmail = PublishSubject<String>()
         let fetchPassword = PublishSubject<String>()
-        let fetchLoginUser = BehaviorSubject<LoginUser>(value: LoginUser(email: "", password: ""))
         let loginTrying = PublishSubject<Void>()
-        let signUpTrying = PublishSubject<Void>()
+        let fetchLoginUser = BehaviorSubject<LoginUser>(value: LoginUser(email: "", password: ""))
         
         email = fetchEmail.asObserver()
         password = fetchPassword.asObserver()
@@ -47,8 +45,5 @@ struct SignInViewModel{
             .disposed(by: disposeBag)
         
         loginUser = loginTrying.withLatestFrom(fetchLoginUser)
-        
-        
-        showSignUpPage = signUpTrying
     }
 }

@@ -10,7 +10,7 @@ import RxCocoa
 import Then
 import UIKit
 
-class SignInViewController: UIViewController {
+final class SignInViewController: UIViewController {
     
     private var signInViewModel = SignInViewModel()
     private let disposeBag = DisposeBag()
@@ -65,9 +65,9 @@ extension SignInViewController{
             $0.configureButton(title: "카카오계정 로그인")
             $0.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
         }
-        
         signUpButton.do {
             $0.configureButton(title: "새로운 카카오계정 만들기")
+            $0.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
         }
         findAccountLabel.do {
             $0.text = "카카오계정 또는 비밀번호 찾기"

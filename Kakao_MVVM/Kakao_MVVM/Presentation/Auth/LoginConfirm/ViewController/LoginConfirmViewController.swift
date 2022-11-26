@@ -1,3 +1,4 @@
+
 import UIKit
 import RxSwift
 import RxCocoa
@@ -6,7 +7,7 @@ protocol LoginConfirmViewControllerDelegate : AnyObject{
     func dismissNavigationController()
 }
 
-class LoginConfirmViewController: UIViewController {
+final class LoginConfirmViewController: UIViewController {
     
     public weak var delegate : LoginConfirmViewControllerDelegate?
     
