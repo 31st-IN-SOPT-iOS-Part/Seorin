@@ -23,7 +23,7 @@ final class SignUpViewController: UIViewController {
         $0.isSecureTextEntry = true
     }
     
-    private let signUpConfirmButton = UIButton().then{
+    private let signUpConfirmButton = UIButton().then {
         $0.configureButton(title: "새로운 카카오계정 만들기")
         $0.addTarget(self, action: #selector(didTapSignUpConfirmButton), for: .touchUpInside)
     }
@@ -31,7 +31,7 @@ final class SignUpViewController: UIViewController {
     
     
     //MARK: Objc function
-    @objc private func didTapSignUpConfirmButton(){
+    @objc private func didTapSignUpConfirmButton() {
         let vc = LoginCheckViewController()
         vc.modalPresentationStyle = .formSheet
         vc.configEmail(emailTextField.text ?? "")
@@ -42,48 +42,54 @@ final class SignUpViewController: UIViewController {
     //MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         
+        view.backgroundColor = .white
         setSignUpViewControllerLayout()
     }
     
 }
 
-extension SignUpViewController : LoginCheckViewControllerDelegate{
+extension SignUpViewController: LoginCheckViewControllerDelegate{
     func dismissNavigationController(){
         self.navigationController?.dismiss(animated: true)
     }
 }
 
-extension SignUpViewController{
-    private func setSignUpViewControllerLayout(){
+extension SignUpViewController {
+    
+    private func setSignUpViewControllerLayout() {
+        
         [startLabel, emailTextField, passwordTextField, passwordCheckTextField, signUpConfirmButton].forEach {
             view.addSubview($0)
         }
+        
         startLabel.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(40)
             make.centerX.equalToSuperview()
         }
+        
         emailTextField.snp.makeConstraints { make in
             make.top.equalTo(startLabel.snp.bottom).offset(116)
             make.leading.trailing.equalToSuperview().inset(21)
             make.height.equalTo(49)
         }
+        
         passwordTextField.snp.makeConstraints { make in
             make.top.equalTo(emailTextField.snp.bottom).offset(10)
             make.leading.trailing.equalToSuperview().inset(21)
             make.height.equalTo(49)
         }
+        
         passwordCheckTextField.snp.makeConstraints { make in
             make.top.equalTo(passwordTextField.snp.bottom).offset(10)
             make.leading.trailing.equalToSuperview().inset(21)
             make.height.equalTo(49)
         }
+        
         signUpConfirmButton.snp.makeConstraints { make in
             make.top.equalTo(passwordCheckTextField.snp.bottom).offset(26)
             make.leading.trailing.equalToSuperview().inset(21)
             make.height.equalTo(44)
         }
     }
-
 }

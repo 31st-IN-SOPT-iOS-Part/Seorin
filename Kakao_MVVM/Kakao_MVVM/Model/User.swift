@@ -13,11 +13,18 @@ struct User{
     var profileImg : UIImage
     var stateMessage : String
     
-    
-    init(name : String, profileImg: UIImage = Image.defaultProfileImage!, stateMessage: String = ""){
+    init(name : String, profileImg: UIImage, stateMessage: String){
         self.name = name
         self.profileImg = profileImg
         self.stateMessage = stateMessage
     }
     
+    init(name: String){
+        self.name = name
+        self.profileImg = Image.defaultProfileImage!
+        self.stateMessage = ""
+//        self.init(name: name, profileImg: Image.defaultProfileImage!, stateMessage: "")
+    }
 }
+
+

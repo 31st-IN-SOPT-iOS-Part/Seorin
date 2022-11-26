@@ -1,8 +1,8 @@
 //
 //  LoginTextField.swift
-//  Kakao_MVVM
+//  SOPT-Assignment-KAKAO
 //
-//  Created by Mac Book Pro on 2022/10/27.
+//  Created by Mac Book Pro on 2022/10/23.
 //
 
 import Foundation
@@ -47,4 +47,3 @@ final class LogintextField : UITextField{
 
     
 }
-

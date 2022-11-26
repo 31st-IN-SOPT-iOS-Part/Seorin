@@ -7,7 +7,10 @@
 
 import UIKit
 
-final class ChattingTableViewCell: UITableViewCell {
+final class ChattingTableViewCell: UITableViewCell, UITableViewRegisterable {
+    
+    static var isFromNib: Bool = false
+    
     private let profileImageView = UIImageView().then {
         $0.contentMode = .scaleAspectFit
     }

@@ -1,8 +1,8 @@
 //
 //  ProfileButton.swift
-//  Kakao_MVVM
+//  SOPT-Assignment-KAKAO
 //
-//  Created by Mac Book Pro on 2022/10/27.
+//  Created by Mac Book Pro on 2022/10/25.
 //
 
 import Foundation
@@ -14,7 +14,6 @@ enum ProfileButtonType{
     case kakaoStoryButton
 }
 final class ProfileButton : UIButton{
-    
     
     init(frame: CGRect, profileButtonType: ProfileButtonType) {
         super.init(frame: frame)
@@ -62,4 +61,3 @@ final class ProfileButton : UIButton{
     }
     
 }
-

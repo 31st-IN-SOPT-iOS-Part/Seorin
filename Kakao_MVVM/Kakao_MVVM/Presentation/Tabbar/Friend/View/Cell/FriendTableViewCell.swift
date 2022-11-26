@@ -13,7 +13,9 @@ enum UserType{
     case friend
 }
 
-final class FriendTableViewCell: UITableViewCell {
+final class FriendTableViewCell: UITableViewCell, UITableViewRegisterable {
+    static var isFromNib: Bool = false
+    
     private var userType: UserType?
     
     private let profileImageView = UIImageView().then {

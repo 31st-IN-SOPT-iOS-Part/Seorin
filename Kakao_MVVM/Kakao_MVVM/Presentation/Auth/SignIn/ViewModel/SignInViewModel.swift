@@ -6,20 +6,43 @@
 //
 
 import Foundation
+import RxCocoa
 import RxSwift
 
+struct LoginUser{
+    var email: String
+    var password: String
+}
+
 struct SignInViewModel{
-    var name : Observable<String>
+    let disposeBag = DisposeBag()
     
-    func login(name: String) -> Observable<String> {
-            return Observable.create({ (observer) -> Disposable in
+    //MARK: - INPUT
+    public var email: AnyObserver<String>
+    public var password: AnyObserver<String>
+    public var login: AnyObserver<Void>
 
-                print("\(observer)") // 요기다가 비지니스 로직 (네트워크를 타고 온 것들)
-                
-                observer.onNext(name)
-                
-                return Disposables.create()
+    //MARK: - OUTPUT
+    public var loginUser: Observable<LoginUser>
+    
+    init() {
+        let fetchEmail = PublishSubject<String>()
+        let fetchPassword = PublishSubject<String>()
+        let loginTrying = PublishSubject<Void>()
+        let fetchLoginUser = BehaviorSubject<LoginUser>(value: LoginUser(email: "", password: ""))
+        
+        email = fetchEmail.asObserver()
+        password = fetchPassword.asObserver()
+        login = loginTrying.asObserver()
 
+        
+        let _ = Observable
+            .combineLatest(fetchEmail, fetchPassword)
+            .subscribe(onNext: {
+                fetchLoginUser.onNext(LoginUser(email: $0, password: $1))
             })
-        }
+            .disposed(by: disposeBag)
+        
+        loginUser = loginTrying.withLatestFrom(fetchLoginUser)
+    }
 }

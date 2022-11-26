@@ -5,52 +5,79 @@
 //  Created by Mac Book Pro on 2022/10/05.
 //
 
-import UIKit
+import RxSwift
+import RxCocoa
 import Then
+import UIKit
 
-class SignInViewController: UIViewController {
+final class SignInViewController: UIViewController {
+    
+    private var signInViewModel = SignInViewModel()
+    private let disposeBag = DisposeBag()
+    
     //MARK: UIView
-        private let startLabel = UILabel().then{
+    private let startLabel = UILabel()
+    private let explainLabel = UILabel()
+    private let emailTextField = LogintextField(frame: .zero, "이메일 또는 전화번호")
+    private let passwordTextField = LogintextField(frame: .zero, "비밀번호")
+    private let loginButton = UIButton()
+    private let signUpButton = UIButton()
+    private let findAccountLabel = UILabel()
+    
+    //MARK: viewDidLoad
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUI()
+        setLayout()
+        bindingRx()
+    }
+}
+extension SignInViewController{
+    
+    private func bindingRx(){
+        emailTextField.rx.text.orEmpty
+            .bind(to: signInViewModel.email)
+            .disposed(by: disposeBag)
+        
+        passwordTextField.rx.text.orEmpty
+            .bind(to: signInViewModel.password)
+            .disposed(by: disposeBag)
+        
+        loginButton.rx.tap
+            .bind(to: signInViewModel.login)
+            .disposed(by: disposeBag)
+    }
+    
+    private func setUI(){
+        startLabel.do {
             $0.text = "카카오톡을 시작합니다"
             $0.font = .systemFont(ofSize: 20)
         }
-        private let explainLabel = UILabel().then{
+        explainLabel.do {
             $0.text = "사용하던 카카오계정이 있다면 \n 이메일 또는 전화번호로 로그인해 주세요."
             $0.numberOfLines = 2
             $0.textColor = .lightGray
             $0.textAlignment = .center
         }
-        private let emailTextField = LogintextField(frame: .zero, "이메일 또는 전화번호")
-        
-        private let passwordTextField = LogintextField(frame: .zero, "비밀번호").then{
+        passwordTextField.do {
             $0.isSecureTextEntry = true
         }
-        
-        private let loginButton = UIButton().then{
+        loginButton.do {
             $0.configureButton(title: "카카오계정 로그인")
             $0.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
         }
-        
-        private let signUpButton = UIButton().then{
+        signUpButton.do {
             $0.configureButton(title: "새로운 카카오계정 만들기")
+            $0.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
         }
-        
-        private let findAccountLabel = UILabel().then{
+        findAccountLabel.do {
             $0.text = "카카오계정 또는 비밀번호 찾기"
             $0.textAlignment = .center
         }
-        
-        //MARK: viewDidLoad
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            view.backgroundColor = .white
-            setLoginViewControllerLayout()
-            
-            signUpButton.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
-        }
-}
-extension SignInViewController{
-    private func setLoginViewControllerLayout(){
+    }
+    
+    private func setLayout(){
+        view.backgroundColor = .white
         [startLabel, explainLabel, emailTextField, passwordTextField, loginButton, signUpButton, findAccountLabel].forEach {
             view.addSubview($0 as! UIView)
         }
@@ -87,11 +114,11 @@ extension SignInViewController{
             make.centerX.equalToSuperview()
         }
     }
-    //MARK: Objc function
+    
     @objc private func didTapLoginButton(){
         let vc = LoginConfirmViewController()
         vc.modalPresentationStyle = .formSheet
-        vc.configEmail(emailTextField.text ?? "")
+        vc.setDataBindRx(LogInConfirmViewModel(loginUser: signInViewModel.loginUser))
         vc.delegate = self
         present(vc, animated: true)
     }
@@ -106,3 +133,5 @@ extension SignInViewController : LoginConfirmViewControllerDelegate{
         self.navigationController?.dismiss(animated: true)
     }
 }
+
+
